@@ -1,0 +1,131 @@
+.graphic_design {
+    position: relative;
+    color: white;
+    overflow: hidden;
+
+    h1{
+        font-family: $ff-nf;
+            font-size: $fs-24;
+            margin-bottom: .5em;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    &__text{
+        margin-bottom: 1em;
+        padding: 0 7%;
+    }
+
+    &-header{
+        display: flex;
+        flex-wrap: wrap;
+
+        span{
+            color: $highlight-color;
+        }
+    }
+
+    &__offer{
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 1fr;
+        overflow: hidden;
+
+        &-number{
+            grid-row: 1/2;
+            grid-column: 1/3;
+            margin-top: auto;
+        }
+
+        h1{
+            grid-row: 1/2;
+            grid-column: 2/3;
+            margin-top: auto;
+            padding-left: .2em;
+            margin-right: 20%;
+        }
+
+        img {
+            content: url('/dist/img/ba.svg');
+        }
+    }
+
+    #offer-arrow{
+        rotate: 90deg;
+        grid-row: 2/3;
+        grid-column: 1/3;
+        margin: auto;
+        margin-top: -1em;
+    }
+
+    &__packages{
+        margin: 2em 0 4em;
+        text-align: center;
+
+        &-container{
+            width: 100%;
+            border: 1px solid white;
+            margin-bottom: 2em;
+            // margin-left: -100%;
+        }
+
+        &-card{
+            width: 100%;
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+
+
+            &-line{
+                position: absolute;
+                width: 200%;
+                left: 0;
+                height: 1px;
+                background: white;
+                z-index: -1;
+                margin-top: -.5em;
+            }
+            
+            &-text{
+                text-align: start;
+                margin: 1em 7%;
+                display: none;
+            }
+
+            &-image{ 
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 400px;
+            }
+
+            &-prize{
+                font-family: $ff-nf;
+                font-size: $fs-24;
+                font-weight: 600;
+                display: none;
+            }
+        }
+    }
+}
+
+.standard{
+    background-image: url('../img/STDRD.png');
+}
+
+.special{
+    background-image: url('../img/servicesSCSL.png');
+}
+
+.swiper-pagination2 .box {
+    border-radius: 0;
+    background: $highlight-color;
+    width: 12px;
+    height: 12px;
+  }
+

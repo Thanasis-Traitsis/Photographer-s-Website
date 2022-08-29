@@ -1,0 +1,244 @@
+.work-menu{
+
+    &__container{
+        // margin-left: 7%;
+    }
+
+    &__images{
+        display: none;
+    }
+
+    &__card{
+        margin: 1em 0;
+        padding-left: 7%;
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        position: relative;
+        overflow: hidden;
+
+        &-container{
+            position: relative;
+            overflow: hidden;
+            height: 0px;
+        }
+
+        &-header{
+            color: white;
+            font-family: $ff-nf;
+            font-size: $fs-24;
+            transform-origin: left;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+
+            &::before{
+                content: "";
+                position: absolute;
+                left: -10px;
+                width: 20%;
+                bottom: 0;
+                height: 8px;
+                background: $highlight-color;
+                text-align: end;
+                padding: 3px 10px;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: all 400ms ease-in-out;
+                z-index: -1;
+            }
+        
+            &:hover::before{
+                transform: scaleX(1);
+            }
+
+            &.active::before{
+                transform: scaleX(1);
+            }
+
+        }
+
+        &-text{
+            color: white;
+        }
+
+
+        &-image{
+            overflow: hidden;
+            display: flex;
+            justify-content: end;
+            margin:1em 0 2em;
+        }
+
+        &:first-child{
+                
+            img{
+                // content: url('/dist/img/FY-Lingo.png');
+                width: 100%;
+            }
+        }
+
+        &:nth-child(2){
+                
+            img{
+                // content: url('/dist/img/TSE-karma_II.png');
+                width: 100%;
+            }
+        }
+
+        &:nth-child(3){
+                
+            img{
+                // content: url('/dist/img/Drew_x_Gkaz-Sorry.png');
+                width: 100%;
+            }
+        }
+
+        &:nth-child(4){
+                
+            img{
+                // content: url('/dist/img/FY_x_LilBarty-TRAPNEST2015.png');
+                width: 100%;
+            }
+        }
+
+        &:nth-child(5){
+
+            .work-menu__card-image{
+                display: flex;
+                flex-direction: column;
+            }
+                
+            img{
+
+                &:first-child{
+                    // content: url('/dist/img/indigo_front_logo.jpg');
+                    width: 70%;
+                    align-self: end;
+                }
+
+                &:nth-child(2){
+                    // content: url('/dist/img/indigo_front.png');
+                    width: 100%;
+                    margin-top: -2em;
+                }
+
+                &:nth-child(3){
+                    // content: url('/dist/img/indigo_back_logo.jpg');
+                    width: 70%;
+                    margin-top: -4em;
+                    align-self: end;
+                }
+            }
+        }
+
+        &:nth-child(6){
+
+            .work-menu__card-image{
+                display: flex;
+                flex-direction: column;
+            }
+                
+            img{
+
+                &:first-child{
+                    // content: url('/dist/img/joker_twoface_live1.jpg');
+                    width: 90%;
+                    align-self: end;
+                    opacity: .8;
+                }
+
+                &:nth-child(2){
+                    // content: url('/dist/img/joker_twoface_live2.jpg');
+                    width: 120%;
+                    margin-top: -2em;
+                    margin-left: -2em;
+                    z-index: 2;
+                }
+
+                &:nth-child(3){
+                    // content: url('/dist/img/joker_twoface_live3.jpg');
+                    width: 90%;
+                    margin-top: -2em;
+                    align-self: end;
+                    opacity: .8;
+                }
+            }
+        }
+
+        &:nth-child(7){
+
+            .work-menu__card-image{
+                display: flex;
+                flex-direction: column;
+            }
+                
+            img{
+
+                &:first-child{
+                    // content: url('/dist/img/propaganda1.jpg');
+                    width: 90%;
+                    align-self: end;
+                    opacity: .8;
+                }
+
+                &:nth-child(2){
+                    // content: url('/dist/img/propaganda2.jpg');
+                    width: 120%;
+                    margin-top: -2em;
+                    margin-left: -2em;
+                    z-index: 2;
+                }
+
+                &:nth-child(3){
+                    // content: url('/dist/img/propaganda3.jpg');
+                    width: 90%;
+                    margin-top: -2em;
+                    align-self: end;
+                    opacity: .8;
+                }
+
+                &:nth-child(4){
+                    // content: url('/dist/img/propaganda4.jpg');
+                    width: 120%;
+                    margin-top: 0em;
+                    margin-left: -2em;
+                    z-index: 2;
+                }
+            }
+        }
+
+        svg{
+            position: absolute;
+            top: 5px;
+            left: -100%;
+            opacity: 1;
+            max-height: 100px;
+            overflow: hidden;
+            
+            line{
+                stroke: $highlight-color;
+            }
+        }
+
+    }
+
+    // &__card.active{
+    //     padding-left: 45px;
+
+    //         h1{
+    //             color: white;
+    //             font-size: $fs-32;
+    //         }
+
+    //         div{
+    //             max-height: 100%;
+    //             overflow: hidden;
+    //         }
+
+    //         svg{
+    //             opacity: 1;
+    //             max-height: 100px;
+    //         }
+    // }
+}

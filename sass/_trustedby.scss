@@ -1,0 +1,103 @@
+.trustedby {
+    background: $bg-color;
+
+    &__header{
+        text-transform: uppercase;
+        font-size: $fs-24;
+        font-family: $ff-nf;
+        color: white;
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -91px;
+            height: 100px;
+            width: 1px;
+            background: white;
+        }
+    }
+
+    &__companies {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+        margin-top: 1em;
+        justify-content: center;
+
+        &-icon {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 1em;
+            border-bottom: 2px solid $highlight_color;
+            cursor: pointer;
+            position: relative;
+
+            // &:first-child{
+            //     background-image: url("/dist/img/capital_music-bg.png");
+            //     background-repeat: no-repeat;
+            //     background-size: contain;
+            //     background-position: bottom;
+            // }
+            
+            // &:nth-child(2){
+            //     background-image: url("/dist/img/ath-bg.png");
+            //     background-repeat: no-repeat;
+            //     background-size: contain;
+            //     background-position: bottom;
+            // }
+
+            // &:nth-child(3){
+            //     background-image: url("/dist/img/madhouse-bg.png");
+            //     background-repeat: no-repeat;
+            //     background-size: contain;
+            //     background-position: bottom;
+            // }
+
+            &-box{
+                width: 100%;
+                height: 100%;
+                position: relative;   
+                overflow: hidden;       
+            }
+
+            img{
+                transform: scale(.9);
+                position: absolute;
+                left: -5px;
+            }
+
+            &:hover{
+                transition: 500ms ease-in-out;
+
+                img {
+                    transform: scale(1);
+                    // background: $highlight_color;
+                    transition: 500ms ease-in-out;
+                }
+
+                p{
+                    transition: 500ms ease-in-out;
+                    opacity: 1;
+                    margin-top: 0;
+                }
+            }
+
+            img{
+                width: 100%;
+                transition: 500ms ease-in-out;
+            }
+
+            p {
+                text-transform: uppercase;
+                color: white;
+                text-align: center;
+                font-weight: $fw-b;
+                opacity: 0;
+                transition: 500ms ease-in-out;
+                margin-top: -2em;
+            }
+        }
+    }
+}

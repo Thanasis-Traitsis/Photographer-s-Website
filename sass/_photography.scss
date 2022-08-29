@@ -1,0 +1,89 @@
+.photography{
+    overflow: hidden;
+
+    .photography__container{
+        color: white;
+
+        &-header{
+            font-family: $ff-nf;
+            font-size: $fs-24;
+            margin-bottom: .5em;
+        }
+
+        &-text{
+            margin-bottom:2em;
+        }
+
+        &-ba{
+            width: 100%;
+
+            &-image{
+                width: 100%;
+                height: 300px;
+                position: relative;
+                overflow: hidden;
+
+                img{
+                    position: absolute;
+                    width: 100%;
+                    // height: 100%;
+
+                    &:first-child{
+                        opacity: 1;
+                    }
+
+                    &:nth-child(2){
+                        opacity: 0;
+                    }
+                }
+            }
+
+            &-items{
+                display: flex;
+                font-family: $ff-old;
+                font-size: $fs-40;
+                position: relative;
+                margin-top: 50px;
+
+                & svg{
+                    display: none;
+                }
+
+                & img{
+                    margin: 0 auto;
+                    // rotate: -90deg;
+                    cursor: pointer;
+                    content: url('/dist/img/ba.svg');
+                }
+            }
+
+            &-before{
+                position: absolute;
+                left: 0;
+                top: -1em;
+                color: $bg-color;
+                -webkit-text-stroke: 1px white;
+
+                &.active-ba{
+                    color: white;
+                    -webkit-text-stroke: 0px white;
+                }
+            }
+
+            &-after{
+                position: absolute;
+                right: 0;
+                top: 90%;
+                color: $bg-color;
+                -webkit-text-stroke: 1px white;
+
+                &.active-ba{
+                    color: white;
+                    -webkit-text-stroke: 0px white;
+                }
+            }
+        }
+
+    }
+}
+

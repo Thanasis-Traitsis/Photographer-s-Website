@@ -1,0 +1,85 @@
+.contact{
+    overflow: hidden;
+
+    &__container{
+        display: grid;
+        grid-template-columns: minmax(120px, 170px) 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    &__icon{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 100%;
+        border: 1px solid white;
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            right: 20%;
+            background: white;
+        }
+    }
+
+    &__headers{
+        grid-column: 1/3;
+        grid-row: 2/3;
+        position: relative;
+        padding-left: .2em;
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 1px;
+            height: 102.5%;
+            background: white;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 110%;
+            height: 1px;
+            background: white;
+        }
+    }
+
+    &__header{
+        font-family: $ff-nf;
+        font-size: $fs-24;
+        color: white;
+        margin-bottom: auto;
+
+        &:nth-child(2) {
+            margin-left: .5em;
+        }
+
+        &:nth-child(3) {
+            margin-left: 1em;
+        }
+
+        span{
+            color: $highlight-color;
+        }
+    }
+
+    &__btn{
+        grid-column: 2/4;
+        grid-row: 6/7;
+        text-transform: uppercase;
+        font-weight: $fw-xb;
+        font-size: $fs-20;
+        margin-left: auto;
+        text-decoration: none;
+        color: white;
+        margin-right: -1em;
+        margin-top: .2em;
+    }
+}

@@ -1,0 +1,53 @@
+.videography{
+    overflow: hidden;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        gap: 2em;
+    }
+
+    &__text{
+        position: relative;
+
+        &-title{
+            font-family: $ff-nf;
+            font-size: $fs-24;
+            margin-bottom: .5em;
+        }
+
+        &-paragraph{
+            padding: 1em 7%;
+        }
+    }
+
+    &__video{
+
+        &-clip{
+            margin: 10px 10px 5px;
+
+            video {
+                width: 100%;
+            }
+        }
+    }
+
+    &__tape{
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding: .5em;
+        display: flex;
+        gap: 1em;
+        width: 1000%;
+        // overflow: hidden;
+    }
+
+    .boxes{
+        position: relative;
+        min-width: 26px;
+        height: 20px;
+        border-radius: 2px;
+        background: gray;
+    }
+}

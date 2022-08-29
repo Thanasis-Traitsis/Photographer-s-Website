@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marios</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/dist/css/main.css">
+
+     <!-- Link Swiper's CSS -->
+     <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- FONTS -->
+    <!-- Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Old Standard -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body data-barba="wrapper"> 
+    <div class="loader">
+        <div class="page-transition1"></div>
+        <div class="page-transition2"></div>
+    </div> 
+    
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="/index.html" class="nav__logo">
+                <img src="/dist/img/kgm-icon.png" alt="">
+            </a>
+
+            <div class="nav__menu">
+                <div class="nav__menu-btn" id="burger1"></div>
+                <div class="nav__menu-btn" id="burger2"></div>
+                <div class="nav__menu-btn" id="burger3"></div>
+            </div>
+        </nav>
+    </header>
+    <ul class="nav__list">
+        <div class="nav__list-line1"></div>
+        <li id="home-link" class="nav__list-item"><svg width="30" height="30" viewBox="0 0 35 22" fill="" xmlns="http://www.w3.org/2000/svg">
+            <line class="arrowLine" x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+            </svg><a href="index.html" class="nav__list-link">home</a></li> 
+        <li id="services-link" class="nav__list-item"><svg width="30" height="30" viewBox="0 0 35 22" fill="" xmlns="http://www.w3.org/2000/svg">
+            <line class="arrowLine" x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+            </svg><a href="services.html" class="nav__list-link">services</a></li>
+        <li id="work-link" class="nav__list-item"><svg width="30" height="30" viewBox="0 0 35 22" fill="" xmlns="http://www.w3.org/2000/svg">
+            <line class="arrowLine" x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+            </svg><a href="work.html" class="nav__list-link">work</a></li>
+        <li id="contact-link" class="nav__list-item active"><svg width="30" height="30" viewBox="0 0 35 22" fill="" xmlns="http://www.w3.org/2000/svg">
+            <line class="arrowLine" x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+            </svg><a href="contact.html" class="nav__list-link">contact</a></li>
+        <div class="nav__list-line2"></div>
+        <div class="social__icons">
+            <div class="social__icons-box">
+                <a id="instagram_icon" href="https://www.instagram.com/marioskgm/" target="_blank">
+                    <i class="uil uil-instagram"></i>
+                </a>
+            </div>
+            <div class="social__icons-box">
+                <a id="behance_icon" href="https://www.behance.net/marioskgm?tracking_source=search_projects%7Cmarioskgm" target="_blank">
+                    <i class="uil uil-behance"></i>
+                </a>
+            </div>        
+        </div>   
+    </ul>
+
+    <main class="main" data-barba="container" data-barba-namespace="contact">
+        <!-- CONTACT-MAIN -->
+        <section class="contact-main section">
+            <div class="contact-main__container">
+                <div class="contact-main__header">
+                    <h1 class="contact-main__header-text">LET'S</h1>
+                    <h1 class="contact-main__header-text">WORK</h1>
+                    <img alt="" class="contact__svg">
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT-FORM -->
+        <section class="contact-form section">
+            <div class="contact-form__container">
+                <div class="contact-form__arrow">
+                    <img src="" alt="">                    
+                </div>
+                <form action="" class="contact-form__grid" method="POST">
+                    <div class="contact-form__box">
+                        <p class="contact-form__box-placeholder">Name</p>
+                        <div class="contact-form__box-line"></div>
+                        <input name="name" type="text" id="nameInput" class="contact-form__input" autocomplete="off">
+                    </div>
+                    <div class="contact-form__box">
+                        <p class="contact-form__box-placeholder">E-mail</p>
+                        <div class="contact-form__box-line"></div>
+                        <input name="email" type="email" id="emailInput" class="contact-form__input" autocomplete="off">
+                    </div>
+                    <div class="contact-form__box">
+                        <p class="contact-form__box-placeholder">Subject</p>
+                        <div class="contact-form__box-line"></div>
+                        <input name="subject" type="text" id="subjectInput" class="contact-form__input" autocomplete="off">
+                    </div>
+                    <div class="contact-form__box">
+                        <textarea name="message" id="message" rows= "9" class="contact-form__input" placeholder="Message..."></textarea>
+                    </div>
+                    <div class="contact-form__btn-container">
+                        <input type="submit" class="contact-form__btn" value="SEND">
+                        <svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.830078" y1="6.24414" x2="26.8301" y2="6.24414" stroke="white" stroke-width="2"/>
+                            <line y1="-1" x2="6.13049" y2="-1" transform="matrix(0.721844 0.692056 -0.721844 0.692056 20.9678 2.38074)" stroke="white" stroke-width="2"/>
+                            <line y1="-1" x2="6.13049" y2="-1" transform="matrix(0.721844 -0.692056 0.721844 0.692056 22.405 11.4868)" stroke="white" stroke-width="2"/>
+                            </svg> 
+                    </div>
+                </form>
+            </div>
+        </section>  
+
+        <!-- FOOTER -->
+        <section class="footer section">
+            <div class="footer__container container">
+                <div class="footer__buttons">
+                    <div class="footer__buttons-menu">
+                        <div class="footer__buttons-header">menu</div>
+                        <ul class="footer__buttons-list">
+                            <li class="footer__buttons-item"><a href="/index.html" class="footer__buttons-link btn2">home</a></li>
+                            <li class="footer__buttons-item"><a href="/services.html" class="footer__buttons-link btn2">services</a></li>
+                            <li class="footer__buttons-item"><a href="/work.html" class="footer__buttons-link btn2">work</a></li>
+                            <li class="footer__buttons-item"><a href="/contact.html" class="footer__buttons-link btn2">contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__buttons-social">
+                        <div class="footer__buttons-header">social</div>
+                        <div class="footer__buttons-icons">
+                            <div class="social__icons2">
+                                <div class="social__icons-box">
+                                    <a id="instagram_icon2" href="https://www.instagram.com/marioskgm/" target="_blank">
+                                        <i class="uil uil-instagram"></i>
+                                    </a>
+                                </div>
+                                <div class="social__icons-box">
+                                    <a id="behance_icon2" href="https://www.behance.net/marioskgm?tracking_source=search_projects%7Cmarioskgm" target="_blank">
+                                        <i class="uil uil-behance"></i>
+                                    </a>
+                                </div>        
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <div class="footer__copyright-icon">
+                        <img src="/dist/img/kgm-icon.png" alt="">
+                    </div>
+                    <p class="footer__copyright-text">2022 &copy; Copyright</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- barba.js -->
+    <!-- unpkg -->
+    <script src="https://unpkg.com/@barba/core"></script>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"
+      integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/dist/js/app.js"></script>
+</body>
+</html>

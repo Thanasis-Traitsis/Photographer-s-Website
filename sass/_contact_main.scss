@@ -1,0 +1,36 @@
+.contact-main{
+
+    &__container{
+
+    }
+
+    &__header{
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+        border-bottom: 0px solid white;
+       
+
+        img{
+            content: url('/dist/img/CONTACT2.svg');
+            display: none;
+        }
+
+        h1 {
+            color: white;
+            opacity: .8;
+            font-family: $ff-old;
+            font-size: $fs-96;
+            font-weight: 400;
+            font-style: italic;
+
+            &:first-child{
+                align-self: start;
+            }
+
+            &:nth-child(2){
+                align-self: end;
+            }
+        }
+    }
+}

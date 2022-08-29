@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marios</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/dist/css/main.css">
+
+     <!-- Link Swiper's CSS -->
+     <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- FONTS -->
+    <!-- Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Old Standard -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body data-barba="wrapper"> 
+    <div class="loader">
+        <div class="page-transition1"></div>
+        <div class="page-transition2"></div>
+    </div> 
+    
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="/index.html" class="nav__logo">
+                <img src="/dist/img/kgm-icon.png" alt="">
+            </a>
+
+            <div class="nav__menu">
+                <div class="nav__menu-btn" id="burger1"></div>
+                <div class="nav__menu-btn" id="burger2"></div>
+                <div class="nav__menu-btn" id="burger3"></div>
+            </div>
+        </nav>
+    </header>
+    <ul class="nav__list">
+        <div class="nav__list-line1"></div>
+        <li id="home-link" class="nav__list-item"><svg width="30" height="30" viewBox="0 0 35 22" fill="" xmlns="http://www.w3.org/2000/svg">
+            <line class="arrowLine" x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+            </svg><a href="index.html" class="nav__list-link">home</a></li> 
+        <li id="services-link" class="nav__list-item"><svg width="30" height="30" viewBox="0 0 35 22" fill="" xmlns="http://www.w3.org/2000/svg">
+            <line class="arrowLine" x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+            </svg><a href="services.html" class="nav__list-link">services</a></li>
+        <li id="work-link" class="nav__list-item active"><svg width="30" height="30" viewBox="0 0 35 22" fill="" xmlns="http://www.w3.org/2000/svg">
+            <line class="arrowLine" x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+            </svg><a href="work.html" class="nav__list-link">work</a></li>
+        <li id="contact-link" class="nav__list-item"><svg width="30" height="30" viewBox="0 0 35 22" fill="" xmlns="http://www.w3.org/2000/svg">
+            <line class="arrowLine" x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+            <line class="arrowLine" y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+            </svg><a href="contact.html" class="nav__list-link">contact</a></li>
+        <div class="nav__list-line2"></div>
+        <div class="social__icons">
+            <div class="social__icons-box">
+                <a id="instagram_icon" href="https://www.instagram.com/marioskgm/" target="_blank">
+                    <i class="uil uil-instagram"></i>
+                </a>
+            </div>
+            <div class="social__icons-box">
+                <a id="behance_icon" href="https://www.behance.net/marioskgm?tracking_source=search_projects%7Cmarioskgm" target="_blank">
+                    <i class="uil uil-behance"></i>
+                </a>
+            </div>        
+        </div>  
+    </ul>
+
+
+    <main class="main" data-barba="container" data-barba-namespace="work">
+        <!-- WORK-MAIN -->
+        <section class="work-main section">
+            <div class="work-main__container">
+                <div class="work-main__container-header">
+                    <img alt="" class="work__svg">
+                    <!-- <svg width="289" height="73" viewBox="0 0 289 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.764 9.53772C11.188 7.93772 10.452 6.84972 9.556 6.27372C8.66 5.63372 7.508 5.31372 6.1 5.31372H0.148V2.24172H28.564V5.31372H23.956C23.06 5.31372 22.292 5.56972 21.652 6.08171C21.012 6.52972 20.692 7.07372 20.692 7.71372C20.692 8.22572 20.82 8.92972 21.076 9.82572L33.844 53.9857L45.46 11.9377L44.5 8.86572C44.052 7.58572 43.156 6.68972 41.812 6.17772C40.468 5.60172 39.092 5.31372 37.684 5.31372H34.9V2.24172H63.316V5.31372H59.572C56.308 5.31372 54.676 6.97772 54.676 10.3057C54.676 11.2017 54.868 12.1937 55.252 13.2817L67.348 54.8497L79.252 17.0257C79.7 15.2977 79.988 13.9857 80.116 13.0897C80.308 12.1297 80.404 10.9777 80.404 9.63371C80.404 8.41772 79.828 7.39371 78.676 6.56171C77.588 5.72972 76.052 5.31372 74.068 5.31372H70.804V2.24172H96.724V5.31372H92.596C90.42 5.31372 88.724 5.95372 87.508 7.23372C86.356 8.51372 85.46 10.2097 84.82 12.3217L65.716 72.3217H63.316L47.572 18.9457L32.404 72.3217H30.004L11.764 9.53772ZM124.555 72.3217C119.179 72.3217 114.379 70.6257 110.155 67.2337C105.931 63.8417 102.635 59.3937 100.267 53.8897C97.899 48.3217 96.715 42.4977 96.715 36.4177C96.715 30.3377 97.899 24.5457 100.267 19.0417C102.635 13.4737 105.931 8.99372 110.155 5.60172C114.379 2.20972 119.179 0.513718 124.555 0.513718C129.931 0.513718 134.731 2.20972 138.955 5.60172C143.179 8.99372 146.475 13.4737 148.843 19.0417C151.211 24.5457 152.395 30.3377 152.395 36.4177C152.395 42.4977 151.211 48.3217 148.843 53.8897C146.475 59.3937 143.179 63.8417 138.955 67.2337C134.731 70.6257 129.931 72.3217 124.555 72.3217ZM124.555 69.2497C130.827 69.2497 135.339 66.4017 138.091 60.7057C140.843 54.9457 142.219 46.8497 142.219 36.4177C142.219 25.9217 140.843 17.8257 138.091 12.1297C135.339 6.43372 130.827 3.58572 124.555 3.58572C118.283 3.58572 113.771 6.43372 111.019 12.1297C108.267 17.8257 106.891 25.9217 106.891 36.4177C106.891 46.8497 108.267 54.9457 111.019 60.7057C113.771 66.4017 118.283 69.2497 124.555 69.2497ZM210.014 71.7457C207.902 71.7457 206.11 71.3937 204.638 70.6897C203.23 69.9857 202.11 68.8337 201.278 67.2337C199.55 63.9057 198.622 58.2417 198.494 50.2417C198.43 45.9537 197.662 42.4017 196.19 39.5857C194.718 36.7057 192.35 35.2657 189.086 35.2657H178.622V64.9297C178.622 65.8257 178.814 66.4977 179.198 66.9457C179.582 67.3297 180.254 67.5217 181.214 67.5217H189.758V70.5937H160.286V67.5217H167.198C168.926 67.5217 169.79 66.6577 169.79 64.9297V7.90571C169.79 7.00971 169.566 6.36971 169.118 5.98572C168.734 5.53772 168.094 5.31372 167.198 5.31372H160.286V2.24172H191.774C197.982 2.24172 203.07 3.42572 207.038 5.79372C211.006 8.16172 212.99 12.0977 212.99 17.6017C212.99 22.3377 211.198 26.1457 207.614 29.0257C204.094 31.9057 199.838 33.6017 194.846 34.1137V34.4977C198.494 35.2017 201.47 36.8977 203.774 39.5857C206.142 42.2097 207.71 46.7217 208.478 53.1217C208.926 56.7697 209.31 59.4257 209.63 61.0897C210.014 62.7537 210.462 63.9377 210.974 64.6417C211.55 65.2817 212.382 65.6017 213.47 65.6017C216.222 65.6017 217.598 62.1457 217.598 55.2337H219.998C219.998 59.3937 219.39 63.2017 218.174 66.6577C216.958 70.0497 214.238 71.7457 210.014 71.7457ZM187.934 32.1937C193.31 32.1937 197.118 30.9137 199.358 28.3537C201.662 25.7297 202.814 22.1457 202.814 17.6017C202.814 13.6977 201.758 10.6897 199.646 8.57772C197.598 6.40172 194.782 5.31372 191.198 5.31372H181.214C180.318 5.31372 179.646 5.53772 179.198 5.98572C178.814 6.36971 178.622 7.00971 178.622 7.90571V32.1937H187.934ZM226.125 67.5217H233.037C234.765 67.5217 235.629 66.6577 235.629 64.9297V7.90571C235.629 7.00971 235.405 6.36971 234.957 5.98572C234.573 5.53772 233.933 5.31372 233.037 5.31372H226.125V2.24172H253.485V5.31372H247.053C246.157 5.31372 245.485 5.53772 245.037 5.98572C244.653 6.36971 244.461 7.00971 244.461 7.90571V37.6657L266.541 15.1057C267.373 14.2097 267.981 13.3137 268.365 12.4177C268.749 11.5217 268.941 10.4977 268.941 9.34572C268.941 8.19372 268.525 7.23372 267.693 6.46572C266.861 5.69772 265.837 5.31372 264.621 5.31372H262.029V2.24172H287.373V5.31372H283.533C281.421 5.31372 278.541 7.20172 274.893 10.9777L258.765 27.2977L278.349 63.2977C279.181 64.8977 280.109 66.0177 281.133 66.6577C282.157 67.2337 283.629 67.5217 285.549 67.5217H288.717V70.5937H259.725V67.5217H266.157C266.861 67.5217 267.469 67.3297 267.981 66.9457C268.493 66.4977 268.749 66.0177 268.749 65.5057C268.749 65.1217 268.685 64.7057 268.557 64.2577C268.429 63.7457 268.269 63.3617 268.077 63.1057L252.429 33.7297L244.461 41.7937V64.9297C244.461 66.6577 245.325 67.5217 247.053 67.5217H253.485V70.5937H226.125V67.5217Z" fill="white" fill-opacity="0.8"/>
+                        </svg>                         -->
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK-MENU -->
+        <section class="work-menu section">
+            <ul class="work-menu__container">
+                <li class="work-menu__card">
+                    <svg width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+                        <line y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+                        <line y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+                        </svg>   
+                    <h1 class="work-menu__card-header">FY - Lingo</h1>
+                    <div class="work-menu__card-container">
+                        <div class="work-menu__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel arcu diam sit adipiscing eros, habitasse. </div>
+                        <div class="work-menu__card-image">
+                            <img src="/dist/img/FY-Lingo.png" alt="">
+                        </div> 
+                    </div> 
+                </li>
+                <li class="work-menu__card">
+                    <svg width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+                        <line y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+                        <line y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+                        </svg>                        
+                    <h1 class="work-menu__card-header">TSE - karma II</h1>
+                    <div class="work-menu__card-container">
+                        <div class="work-menu__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel arcu diam sit adipiscing eros, habitasse. </div>
+                        <div class="work-menu__card-image">
+                            <img class="karma" src="/dist/img/TSE-karma_II.png" alt="">
+                            <img class="karma" src="/dist/img/TSE-karma_II-back.png" alt="">
+                        </div> 
+                    </div>
+                </li>
+                <li class="work-menu__card">
+                    <svg width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+                        <line y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+                        <line y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+                        </svg>   
+                    <h1 class="work-menu__card-header">Gkaz x Drew - Sorry</h1>
+                    <div class="work-menu__card-container">
+                        <div class="work-menu__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel arcu diam sit adipiscing eros, habitasse. </div>
+                        <div class="work-menu__card-image">
+                            <img src="/dist/img/Drew_x_Gkaz-Sorry.png" alt="">
+                        </div> 
+                    </div> 
+                </li>
+                <li class="work-menu__card">
+                    <svg width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+                        <line y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+                        <line y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+                        </svg>   
+                    <h1 class="work-menu__card-header">FY x Lil Barty - TRAPNEST2015</h1>
+                    <div class="work-menu__card-container">
+                        <div class="work-menu__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel arcu diam sit adipiscing eros, habitasse. </div>
+                        <div class="work-menu__card-image">
+                            <img src="/dist/img/FY_x_LilBarty-TRAPNEST2015.png" alt="">
+                        </div> 
+                    </div>
+                </li>
+                <li class="work-menu__card">
+                    <svg width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+                        <line y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+                        <line y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+                        </svg>   
+                    <h1 class="work-menu__card-header">INDIGO</h1>
+                    <div class="work-menu__card-container">
+                        <div class="work-menu__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel arcu diam sit adipiscing eros, habitasse. </div>
+                        <div class="work-menu__card-image">
+                            <img class="indigo" src="/dist/img/indigo_front_logo.jpg" alt="">
+                            <img class="indigo" src="/dist/img/indigo_front.png" alt="">
+                            <img class="indigo" src="/dist/img/indigo_back_logo.jpg" alt="">
+                        </div> 
+                    </div>
+                </li>
+                <li class="work-menu__card">
+                    <svg width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+                        <line y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+                        <line y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+                        </svg>   
+                    <h1 class="work-menu__card-header">joker / two-face live</h1>
+                    <div class="work-menu__card-container">
+                        <div class="work-menu__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel arcu diam sit adipiscing eros, habitasse. </div>
+                        <div class="work-menu__card-image">
+                            <img class="jtf" src="/dist/img/joker_twoface_live1.jpg" alt="">
+                            <img class="jtf" src="/dist/img/joker_twoface_live2.jpg" alt="">
+                            <img class="jtf" src="/dist/img/joker_twoface_live3.jpg" alt="">
+                        </div> 
+                    </div>
+                </li>
+                <li class="work-menu__card">
+                    <svg width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
+                        <line y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
+                        <line y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
+                        </svg>   
+                    <h1 class="work-menu__card-header">propaganda</h1>
+                    <div class="work-menu__card-container">
+                        <div class="work-menu__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel arcu diam sit adipiscing eros, habitasse. </div>
+                        <div class="work-menu__card-image">
+                            <img class="propaganda" src="/dist/img/propaganda1.jpg" alt="">
+                            <img class="propaganda" src="/dist/img/propaganda2.jpg" alt="">
+                            <img class="propaganda" src="/dist/img/propaganda3.jpg" alt="">
+                            <img class="propaganda" src="/dist/img/propaganda4.jpg" alt="">
+                        </div> 
+                    </div>
+                </li>
+            </ul>
+            <div class="work-menu__images">
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact section">
+            <div class="contact__container container">
+                <div class="contact__icon">
+                    <svg width="100%" height="100%" viewBox="0 0 178 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.6413 130.564L30.1241 131.42L30.132 131.425L30.6413 130.564ZM18.6413 117.064L17.7497 117.517L17.7557 117.529L18.6413 117.064ZM22.3913 60.5144L23.2841 60.9648L22.3913 60.5144ZM43.9913 33.3643L44.6138 34.1469L44.6149 34.1461L43.9913 33.3643ZM92.8913 34.4144L92.2666 35.1952L92.3493 35.2614L92.4441 35.3088L92.8913 34.4144ZM99.4913 31.2643L100.4 31.681L100.404 31.6741L100.407 31.6671L99.4913 31.2643ZM101.741 23.9143V22.9143H100.894L100.755 23.7499L101.741 23.9143ZM105.191 23.9143L106.17 24.1191L106.422 22.9143H105.191V23.9143ZM95.5913 69.8144V70.8144H96.4038L96.5701 70.0191L95.5913 69.8144ZM92.1413 69.8144L91.1425 69.7644L91.09 70.8144H92.1413V69.8144ZM90.7913 47.6144L89.8071 47.7915L89.8088 47.801L89.8107 47.8105L90.7913 47.6144ZM85.8413 35.1644L86.6501 34.5761L86.6432 34.5669L85.8413 35.1644ZM54.4913 33.0644L55.0834 33.8703L55.0939 33.8624L54.4913 33.0644ZM40.0913 51.8144L40.974 52.2842L40.9756 52.2813L40.0913 51.8144ZM31.6913 74.9144L30.7211 74.6718L30.7193 74.6794L31.6913 74.9144ZM31.2413 120.364L30.338 120.793L30.3423 120.803L30.3469 120.812L31.2413 120.364ZM38.4413 128.314L38.0202 129.221L38.0394 129.23L38.0589 129.238L38.4413 128.314ZM64.5413 125.314L64.0172 124.463L64.5413 125.314ZM78.1913 112.714L77.3986 112.105L77.3913 112.114L78.1913 112.714ZM87.3413 95.9144L87.6757 94.9719L86.7292 94.6361L86.3974 95.584L87.3413 95.9144ZM91.9913 97.5644L92.9382 97.8859L93.2554 96.9518L92.3257 96.6219L91.9913 97.5644ZM74.8913 124.264L75.5692 125L75.5696 124.999L74.8913 124.264ZM45.7913 133.914C40.7873 133.914 35.9115 132.521 31.1506 129.704L30.132 131.425C35.1711 134.407 40.3953 135.914 45.7913 135.914V133.914ZM31.1584 129.708C26.5467 126.922 22.6614 122.575 19.5268 116.6L17.7557 117.529C21.0212 123.754 25.1358 128.406 30.1242 131.42L31.1584 129.708ZM19.5328 116.611C16.523 110.689 14.9913 103.305 14.9913 94.4144H12.9913C12.9913 103.524 14.5596 111.24 17.7498 117.517L19.5328 116.611ZM14.9913 94.4144C14.9913 83.0833 17.7487 71.9367 23.2841 60.9648L21.4985 60.0639C15.8338 71.292 12.9913 82.7454 12.9913 94.4144H14.9913ZM23.2841 60.9648C28.826 49.98 35.9383 41.0479 44.6138 34.1469L43.3688 32.5817C34.4443 39.6808 27.1566 48.8487 21.4985 60.0639L23.2841 60.9648ZM44.6149 34.1461C53.3787 27.1548 62.2652 23.7144 71.2913 23.7144V21.7144C61.7174 21.7144 52.4039 25.3739 43.3677 32.5826L44.6149 34.1461ZM71.2913 23.7144C74.8641 23.7144 77.956 24.3898 80.5941 25.7088L81.4885 23.9199C78.5265 22.4389 75.1185 21.7144 71.2913 21.7144V23.7144ZM80.5941 25.7088C83.3192 27.0713 85.5253 28.6126 87.2342 30.3215L88.6484 28.9072C86.7572 27.0161 84.3634 25.3574 81.4885 23.9199L80.5941 25.7088ZM87.2342 30.3215L89.9342 33.0215L91.3484 31.6072L88.6484 28.9072L87.2342 30.3215ZM89.9342 33.0215C90.9369 34.0241 91.7201 34.758 92.2666 35.1952L93.516 33.6335C93.0624 33.2707 92.3457 32.6046 91.3484 31.6072L89.9342 33.0215ZM92.4441 35.3088C93.2072 35.6903 94.0657 35.8643 94.9913 35.8643V33.8643C94.3169 33.8643 93.7754 33.7384 93.3385 33.5199L92.4441 35.3088ZM94.9913 35.8643C97.4337 35.8643 99.2117 34.2744 100.4 31.681L98.5822 30.8477C97.5709 33.0542 96.3489 33.8643 94.9913 33.8643V35.8643ZM100.407 31.6671C101.536 29.1001 102.312 26.5702 102.728 24.0787L100.755 23.7499C100.37 26.0585 99.6465 28.4286 98.576 30.8616L100.407 31.6671ZM101.741 24.9143H105.191V22.9143H101.741V24.9143ZM104.212 23.7096L94.6125 69.6096L96.5701 70.0191L106.17 24.1191L104.212 23.7096ZM95.5913 68.8144H92.1413V70.8144H95.5913V68.8144ZM93.14 69.8643C93.2414 67.8377 93.2913 64.6666 93.2913 60.3643H91.2913C91.2913 64.6621 91.2412 67.791 91.1425 69.7644L93.14 69.8643ZM93.2913 60.3643C93.2913 56.7761 92.7795 52.4564 91.7719 47.4182L89.8107 47.8105C90.8031 52.7723 91.2913 56.9526 91.2913 60.3643H93.2913ZM91.7755 47.4372C90.8551 42.3242 89.1578 38.0244 86.65 34.5762L85.0326 35.7525C87.3248 38.9043 88.9274 42.9045 89.8071 47.7915L91.7755 47.4372ZM86.6432 34.5669C82.6566 29.2164 77.3107 26.5144 70.6913 26.5144V28.5144C76.6719 28.5144 81.426 30.9123 85.0394 35.7618L86.6432 34.5669ZM70.6913 26.5144C64.5645 26.5144 58.9547 28.441 53.8887 32.2663L55.0939 33.8624C59.8279 30.2877 65.0181 28.5144 70.6913 28.5144V26.5144ZM53.8992 32.2585C48.8228 35.9881 43.937 42.3907 39.207 51.3474L40.9756 52.2813C45.6456 43.4381 50.3598 37.3406 55.0834 33.8702L53.8992 32.2585ZM39.2085 51.3445C35.8596 57.6365 33.0345 65.4184 30.7211 74.6718L32.6614 75.1569C34.9481 66.0103 37.723 58.3922 40.974 52.2842L39.2085 51.3445ZM30.7193 74.6794C28.5004 83.8574 27.3913 93.2364 27.3913 102.814H29.3913C29.3913 93.3923 30.4822 84.1713 32.6633 75.1493L30.7193 74.6794ZM27.3913 102.814C27.3913 110.569 28.3435 116.595 30.338 120.793L32.1446 119.935C30.339 116.134 29.3913 110.46 29.3913 102.814H27.3913ZM30.3469 120.812C32.404 124.926 34.9405 127.792 38.0202 129.221L38.8624 127.407C36.342 126.237 34.0786 123.803 32.1357 119.917L30.3469 120.812ZM38.0589 129.238C41.0998 130.497 44.5332 131.114 48.3413 131.114V129.114C44.7494 129.114 41.5828 128.532 38.8236 127.39L38.0589 129.238ZM48.3413 131.114C54.1429 131.114 59.7225 129.454 65.0654 126.166L64.0172 124.463C58.9601 127.575 53.7396 129.114 48.3413 129.114V131.114ZM65.0654 126.166C70.3791 122.896 75.0209 118.608 78.9913 113.314L77.3913 112.114C73.5617 117.22 69.1035 121.333 64.0172 124.463L65.0654 126.166ZM78.9839 113.324C83.0468 108.042 86.1488 102.348 88.2851 96.2447L86.3974 95.584C84.3338 101.48 81.3358 106.986 77.3987 112.105L78.9839 113.324ZM87.0069 96.8568L91.6569 98.5068L92.3257 96.6219L87.6757 94.9719L87.0069 96.8568ZM91.0444 97.2428C87.495 107.694 81.8837 116.449 74.213 123.53L75.5696 124.999C83.4989 117.68 89.2875 108.635 92.9382 97.8859L91.0444 97.2428ZM74.2134 123.529C66.7202 130.439 57.2719 133.914 45.7913 133.914V135.914C57.7107 135.914 67.6624 132.29 75.5692 125L74.2134 123.529Z" fill="white"/>
+                        <path d="M161.996 22.0092C161.1 22.0092 160.3 21.7265 159.596 21.1612C158.892 20.5959 158.343 19.8545 157.948 18.9372C157.554 18.0092 157.356 17.0385 157.356 16.0252C157.356 15.0119 157.554 14.0465 157.948 13.1292C158.343 12.2012 158.892 11.4545 159.596 10.8892C160.3 10.3239 161.1 10.0412 161.996 10.0412C162.892 10.0412 163.692 10.3239 164.396 10.8892C165.1 11.4545 165.65 12.2012 166.044 13.1292C166.439 14.0465 166.636 15.0119 166.636 16.0252C166.636 17.0385 166.439 18.0092 166.044 18.9372C165.65 19.8545 165.1 20.5959 164.396 21.1612C163.692 21.7265 162.892 22.0092 161.996 22.0092ZM161.996 21.4972C163.042 21.4972 163.794 21.0225 164.252 20.0732C164.711 19.1132 164.94 17.7639 164.94 16.0252C164.94 14.2759 164.711 12.9265 164.252 11.9772C163.794 11.0279 163.042 10.5532 161.996 10.5532C160.951 10.5532 160.199 11.0279 159.74 11.9772C159.282 12.9265 159.052 14.2759 159.052 16.0252C159.052 17.7639 159.282 19.1132 159.74 20.0732C160.199 21.0225 160.951 21.4972 161.996 21.4972ZM158.962 35.0732H158.898V42.9292C158.898 43.3239 158.988 43.6385 159.17 43.8732C159.362 44.0972 159.607 44.2092 159.906 44.2092H160.482V44.7212H156.674V44.2092H157.25C157.559 44.2092 157.804 44.0972 157.986 43.8732C158.167 43.6385 158.258 43.3239 158.258 42.9292V34.2732C158.247 34.1239 158.21 34.0172 158.146 33.9532C158.082 33.8785 157.975 33.8412 157.826 33.8412H156.674V33.3292H159.698L165.25 42.2572V35.1212C165.25 34.7265 165.159 34.4172 164.978 34.1932C164.796 33.9585 164.556 33.8412 164.258 33.8412H163.682V33.3292H167.49V33.8412H166.914C166.615 33.8412 166.37 33.9585 166.178 34.1932C165.986 34.4172 165.89 34.7265 165.89 35.1212V45.0092H165.25L158.962 35.0732ZM159.295 67.2092H160.831C161.119 67.2092 161.263 67.0652 161.263 66.7772V57.2252C161.263 57.0759 161.231 56.9692 161.167 56.9052C161.103 56.8305 160.991 56.7932 160.831 56.7932H160.255C159.583 56.7932 159.002 57.1345 158.511 57.8172C158.202 58.2545 157.994 58.8039 157.887 59.4652C157.78 60.1159 157.727 60.5959 157.727 60.9052H157.279L157.407 56.3292H166.591L166.719 60.9052H166.271C166.271 60.5959 166.218 60.1159 166.111 59.4652C166.004 58.8039 165.796 58.2545 165.487 57.8172C164.996 57.1345 164.415 56.7932 163.743 56.7932H163.167C163.007 56.7932 162.895 56.8305 162.831 56.9052C162.767 56.9692 162.735 57.0759 162.735 57.2252V66.7772C162.735 67.0652 162.879 67.2092 163.167 67.2092H164.703V67.7212H159.295V67.2092ZM156.465 90.2092H157.057C157.686 90.2092 158.145 89.8199 158.433 89.0412L161.873 79.3292H162.273L165.745 89.5052C165.851 89.7719 165.979 89.9585 166.129 90.0652C166.278 90.1612 166.47 90.2092 166.705 90.2092H167.601V90.7212H162.641V90.2092H163.697C163.857 90.2092 163.99 90.1719 164.097 90.0972C164.203 90.0119 164.257 89.9159 164.257 89.8092C164.257 89.6705 164.235 89.5532 164.193 89.4572L163.441 87.3292H159.697L159.313 88.4012C159.163 88.8279 159.089 89.1372 159.089 89.3292C159.089 89.5639 159.147 89.7719 159.265 89.9532C159.382 90.1239 159.585 90.2092 159.873 90.2092H160.849V90.7212H156.465V90.2092ZM159.873 86.8172H163.265L161.601 81.9372L159.873 86.8172ZM162.335 114.009C161.343 114.009 160.489 113.721 159.775 113.145C159.06 112.569 158.516 111.817 158.143 110.889C157.78 109.951 157.599 108.964 157.599 107.929C157.599 106.852 157.78 105.865 158.143 104.969C158.505 104.073 159.023 103.364 159.695 102.841C160.367 102.308 161.151 102.041 162.047 102.041C162.516 102.041 162.959 102.148 163.375 102.361C163.791 102.575 164.132 102.804 164.399 103.049C164.655 103.284 164.825 103.401 164.911 103.401C164.996 103.401 165.055 103.375 165.087 103.321C165.129 103.268 165.172 103.183 165.215 103.065L165.519 102.169H165.919L165.983 107.129H165.535C165.3 106.116 164.996 105.268 164.623 104.585C164.249 103.892 163.839 103.38 163.391 103.049C162.953 102.719 162.516 102.553 162.079 102.553C161.065 102.553 160.345 103.012 159.919 103.929C159.503 104.847 159.295 106.18 159.295 107.929C159.295 109.732 159.513 111.113 159.951 112.073C160.388 113.023 161.183 113.497 162.335 113.497C163.359 113.497 164.137 113.119 164.671 112.361C165.215 111.593 165.524 110.665 165.599 109.577H166.175C166.143 110.207 166.009 110.857 165.775 111.529C165.551 112.201 165.156 112.783 164.591 113.273C164.025 113.764 163.273 114.009 162.335 114.009ZM159.295 136.209H160.831C161.119 136.209 161.263 136.065 161.263 135.777V126.225C161.263 126.076 161.231 125.969 161.167 125.905C161.103 125.831 160.991 125.793 160.831 125.793H160.255C159.583 125.793 159.002 126.135 158.511 126.817C158.202 127.255 157.994 127.804 157.887 128.465C157.78 129.116 157.727 129.596 157.727 129.905H157.279L157.407 125.329H166.591L166.719 129.905H166.271C166.271 129.596 166.218 129.116 166.111 128.465C166.004 127.804 165.796 127.255 165.487 126.817C164.996 126.135 164.415 125.793 163.743 125.793H163.167C163.007 125.793 162.895 125.831 162.831 125.905C162.767 125.969 162.735 126.076 162.735 126.225V135.777C162.735 136.065 162.879 136.209 163.167 136.209H164.703V136.721H159.295V136.209Z" fill="white"/>
+                        </svg>
+                                 
+                </div>
+                <div class="contact__headers">
+                    <h1 class="contact__header">looking forward</h1>
+                    <h1 class="contact__header">for our</h1>
+                    <h1 class="contact__header"><span>collaboration</span> ?</h1>
+                </div>
+                <div class="contact__line"></div>
+                <a href="/contact.html" class="contact__btn btn">let's <span>work</span> <svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0.830078" y1="6.24414" x2="26.8301" y2="6.24414" stroke="white" stroke-width="2"/>
+                    <line y1="-1" x2="6.13049" y2="-1" transform="matrix(0.721844 0.692056 -0.721844 0.692056 20.9678 2.38074)" stroke="white" stroke-width="2"/>
+                    <line y1="-1" x2="6.13049" y2="-1" transform="matrix(0.721844 -0.692056 0.721844 0.692056 22.405 11.4868)" stroke="white" stroke-width="2"/>
+                    </svg> </a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <section class="footer section">
+            <div class="footer__container container">
+                <div class="footer__buttons">
+                    <div class="footer__buttons-menu">
+                        <div class="footer__buttons-header">menu</div>
+                        <ul class="footer__buttons-list">
+                            <li class="footer__buttons-item"><a href="/index.html" class="footer__buttons-link btn2">home</a></li>
+                            <li class="footer__buttons-item"><a href="/services.html" class="footer__buttons-link btn2">services</a></li>
+                            <li class="footer__buttons-item"><a href="/work.html" class="footer__buttons-link btn2">work</a></li>
+                            <li class="footer__buttons-item"><a href="/contact.html" class="footer__buttons-link btn2">contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__buttons-social">
+                        <div class="footer__buttons-header">social</div>
+                        <div class="footer__buttons-icons">
+                            <div class="social__icons2">
+                                <div class="social__icons-box">
+                                    <a id="instagram_icon2" href="https://www.instagram.com/marioskgm/" target="_blank">
+                                        <i class="uil uil-instagram"></i>
+                                    </a>
+                                </div>
+                                <div class="social__icons-box">
+                                    <a id="behance_icon2" href="https://www.behance.net/marioskgm?tracking_source=search_projects%7Cmarioskgm" target="_blank">
+                                        <i class="uil uil-behance"></i>
+                                    </a>
+                                </div>        
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <div class="footer__copyright-icon">
+                        <img src="/dist/img/kgm-icon.png" alt="">
+                    </div>
+                    <p class="footer__copyright-text">2022 &copy; Copyright</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- barba.js -->
+    <!-- unpkg -->
+    <script src="https://unpkg.com/@barba/core"></script>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"
+      integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/dist/js/app.js"></script>
+</body>
+</html>

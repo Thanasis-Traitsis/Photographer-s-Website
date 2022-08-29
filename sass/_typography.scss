@@ -1,0 +1,39 @@
+// Font Family
+$ff-os: 'Open Sans', sans-serif;
+
+$ff-old: 'Old Standard TT', sans-serif;
+
+@font-face {
+    font-family: 'Neutral Face';
+    src: url(/dist/fonts/NeutralFace.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Neutral Face';
+    src: url(/dist/fonts/NeutralFace-Bold.otf);
+    font-weight: bold;
+}
+
+$ff-nf: 'Neutral Face', sans-serif;
+
+// Font Weight
+$fw-n: 400;
+$fw-b: 600;
+$fw-ob: 700;
+$fw-xb: 800;
+
+// Font Size
+$fs-96: 5.9rem;
+$fs-55: 2.6rem;
+$fs-40: 1.9rem;
+$fs-32: 1.6rem;
+$fs-24: 1.3rem;
+$fs-20: 1.1rem;
+
+// Responsive
+$fs-55m: 2.9rem;
+$fs-40m: 2.1rem;
+$fs-32m: 1.7rem;
+$fs-24m: 1.4rem;
+$fs-20m: 1.2rem;

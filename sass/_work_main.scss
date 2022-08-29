@@ -1,0 +1,25 @@
+.work-main{
+
+    &__container{
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            background: white;
+            height: 1px;
+            width: 100%;
+            left: 0;
+            bottom: -1em;
+        }
+
+        &-header{
+            display: flex;
+
+            img {
+                content: url('/dist/img/WORK.svg');
+                margin: auto;
+            }
+        }
+    }
+}
