@@ -292,27 +292,27 @@ function contentAnimation() {
     
         if(bgFillColor == "fillbox1"){
           gsap.to(waveContainer, {backgroundColor: "#21caff", ease: "slow(0.7, 0.7, false)"} )
-          gsap.to(waveBox, {y: "-70%", ease: "slow(0.7, 0.7, false)"} )
-          percentageNumber.innerHTML = "75%";
+          gsap.to(waveBox, {y: "-77%", ease: "slow(0.7, 0.7, false)"} )
+          percentageNumber.innerHTML = "91%";
         }
     
         else if(bgFillColor == "fillbox2") {
           gsap.to(waveContainer, {backgroundColor: "#ea77ff", ease: "slow(0.7, 0.7, false)"} )
-          gsap.to(waveBox, {y: "-60%", ease: "slow(0.7, 0.7, false)"} )
-          percentageNumber.innerHTML = "65%";
+          gsap.to(waveBox, {y: "-73%", ease: "slow(0.7, 0.7, false)"} )
+          percentageNumber.innerHTML = "85%";
         }
     
         else if(bgFillColor == "fillbox3") {
           gsap.to(waveContainer, {backgroundColor: "#31a8ff", ease: "slow(0.7, 0.7, false)"} )
-          gsap.to(waveBox, { y: "-65%", ease: "slow(0.7, 0.7, false)"} )
-          percentageNumber.innerHTML = "70%";
+          gsap.to(waveBox, { y: "-70%", ease: "slow(0.7, 0.7, false)"} )
+          percentageNumber.innerHTML = "80%";
         }
     
-        else if(bgFillColor == "fillbox4") {
-          gsap.to(waveContainer, {backgroundColor: "#ff9a00", ease: "slow(0.7, 0.7, false)"} )
-          gsap.to(waveBox, { y: "-55%", ease: "slow(0.7, 0.7, false)"} )
-          percentageNumber.innerHTML = "60%";
-        }
+        // else if(bgFillColor == "fillbox4") {
+        //   gsap.to(waveContainer, {backgroundColor: "#ff9a00", ease: "slow(0.7, 0.7, false)"} )
+        //   gsap.to(waveBox, { y: "-55%", ease: "slow(0.7, 0.7, false)"} )
+        //   percentageNumber.innerHTML = "60%";
+        // }
       })
     
     })
@@ -325,7 +325,7 @@ function contentAnimation() {
       stagger: 1,
     });
     tlServices.to(box1, {scaleY: 1,duration: 1, ease: "Power3.easeOut"}, "<");
-    tlServices.to(waveBox, {rotate: "600%", y: "-70%", duration: 5, ease: "circ.out"}, "<");
+    tlServices.to(waveBox, {rotate: "600%", y: "-77%", duration: 5, ease: "circ.out"}, "<");
     tlServices.to(waveBox, {rotate: "360deg",duration: 10, ease: "none",yoyo: true, repeat: -1}, "<");
     
     //======================================================== SERVICES PERCENTAGE MOVEMENT
@@ -513,8 +513,8 @@ function contentAnimation() {
       baButton.addEventListener("click", ()=>{
         if(!baPhoto) {
           tl.to(baButton, {rotate: "180deg"});
-          tl.to(baImage.children[0], {scale: "1.1", opacity: 0}, "<");
-          tl.to(baImage.children[1], {scale: "1.1", opacity: 1}, "<");
+          tl.to(baImage.children[0], {scale: "1", opacity: 0}, "<");
+          tl.to(baImage.children[1], {scale: "1", opacity: 1}, "<");
           baBefore.classList.remove("active-ba");
           baAfter.classList.add("active-ba");
           tl.to(baImage.children[0], {scale: "1"}, "<");
@@ -525,8 +525,8 @@ function contentAnimation() {
       
         else{
           tl.to(baButton, {rotate: "-0deg"})
-          tl.to(baImage.children[1], {scale: "1.1", opacity: 0}, "<");
-          tl.to(baImage.children[0], {scale: "1.1", opacity: 1}, "<");
+          tl.to(baImage.children[1], {scale: "1", opacity: 0}, "<");
+          tl.to(baImage.children[0], {scale: "1", opacity: 1}, "<");
           baAfter.classList.remove("active-ba");
           baBefore.classList.add("active-ba");
           tl.to(baImage.children[0], {scale: "1"}, "<");

@@ -934,7 +934,7 @@
   color: white;
   font-family: "Neutral Face", sans-serif;
   font-weight: 600;
-  font-size: 5rem;
+  font-size: 4rem;
   z-index: 7;
   cursor: default;
 }
@@ -1354,7 +1354,7 @@
   width: 100%;
   height: 70%;
   margin-top: -10%;
-  background-image: url("/dist/img/man_with_gun.jpg");
+  background-image: url("/dist/img/gkaz-pou_hsoun(shooting).jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1383,8 +1383,8 @@
 }
 
 .photography .photography__container-ba-image {
-  width: 100%;
-  height: 300px;
+  width: 80%;
+  height: 500px;
   position: relative;
   overflow: hidden;
 }
@@ -1778,7 +1778,19 @@
   width: 100%;
 }
 
-.work-menu__card:nth-child(5) .work-menu__card-image {
+.work-menu__card:nth-child(5) img {
+  width: 100%;
+}
+
+.work-menu__card:nth-child(6) img {
+  width: 100%;
+}
+
+.work-menu__card:nth-child(7) img {
+  width: 100%;
+}
+
+.work-menu__card:nth-child(8) .work-menu__card-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1788,19 +1800,19 @@
           flex-direction: column;
 }
 
-.work-menu__card:nth-child(5) img:first-child {
+.work-menu__card:nth-child(8) img:first-child {
   width: 70%;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
 }
 
-.work-menu__card:nth-child(5) img:nth-child(2) {
+.work-menu__card:nth-child(8) img:nth-child(2) {
   width: 100%;
   margin-top: -2em;
 }
 
-.work-menu__card:nth-child(5) img:nth-child(3) {
+.work-menu__card:nth-child(8) img:nth-child(3) {
   width: 70%;
   margin-top: -4em;
   -ms-flex-item-align: end;
@@ -1808,7 +1820,7 @@
       align-self: end;
 }
 
-.work-menu__card:nth-child(6) .work-menu__card-image {
+.work-menu__card:nth-child(9) .work-menu__card-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1818,31 +1830,19 @@
           flex-direction: column;
 }
 
-.work-menu__card:nth-child(6) img:first-child {
-  width: 90%;
+.work-menu__card:nth-child(9) img:first-child {
+  width: 70%;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
-  opacity: .8;
 }
 
-.work-menu__card:nth-child(6) img:nth-child(2) {
-  width: 120%;
+.work-menu__card:nth-child(9) img:nth-child(2) {
+  width: 100%;
   margin-top: -2em;
-  margin-left: -2em;
-  z-index: 2;
 }
 
-.work-menu__card:nth-child(6) img:nth-child(3) {
-  width: 90%;
-  margin-top: -2em;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
-  opacity: .8;
-}
-
-.work-menu__card:nth-child(7) .work-menu__card-image {
+.work-menu__card:nth-child(10) .work-menu__card-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1852,7 +1852,7 @@
           flex-direction: column;
 }
 
-.work-menu__card:nth-child(7) img:first-child {
+.work-menu__card:nth-child(10) img:first-child {
   width: 90%;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
@@ -1860,14 +1860,14 @@
   opacity: .8;
 }
 
-.work-menu__card:nth-child(7) img:nth-child(2) {
+.work-menu__card:nth-child(10) img:nth-child(2) {
   width: 120%;
   margin-top: -2em;
   margin-left: -2em;
   z-index: 2;
 }
 
-.work-menu__card:nth-child(7) img:nth-child(3) {
+.work-menu__card:nth-child(10) img:nth-child(3) {
   width: 90%;
   margin-top: -2em;
   -ms-flex-item-align: end;
@@ -1876,10 +1876,69 @@
   opacity: .8;
 }
 
-.work-menu__card:nth-child(7) img:nth-child(4) {
+.work-menu__card:nth-child(11) .work-menu__card-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.work-menu__card:nth-child(11) img:first-child {
+  width: 90%;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  opacity: .8;
+}
+
+.work-menu__card:nth-child(11) img:nth-child(2) {
+  width: 120%;
+  margin-top: -2em;
+  margin-left: -2em;
+  z-index: 2;
+}
+
+.work-menu__card:nth-child(11) img:nth-child(3) {
+  width: 90%;
+  margin-top: -2em;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  opacity: .8;
+}
+
+.work-menu__card:nth-child(11) img:nth-child(4) {
   width: 120%;
   margin-top: 0em;
   margin-left: -2em;
+  z-index: 2;
+}
+
+.work-menu__card:nth-child(12) .work-menu__card-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.work-menu__card:nth-child(12) img:first-child {
+  width: 100%;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  opacity: 1;
+}
+
+.work-menu__card:nth-child(12) img:nth-child(2) {
+  width: 90%;
+  margin-top: -2em;
+  margin-left: 2em;
   z-index: 2;
 }
 
@@ -2200,6 +2259,10 @@ body {
 .btn2:hover::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+p span {
+  color: #bd9e81;
 }
 
 .loader {
@@ -3357,7 +3420,7 @@ body {
     width: 100%;
     height: 70%;
     margin-top: -10%;
-    background-image: url("/dist/img/man_with_gun.jpg");
+    background-image: url("/dist/img/gkaz-pou_hsoun(shooting).jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -3380,11 +3443,10 @@ body {
     width: 100%;
   }
   .photography .photography__container-ba-image {
-    width: 100%;
-    height: 500px;
+    width: 82%;
+    height: 800px;
     position: relative;
     overflow: hidden;
-    background: gray;
   }
   .photography .photography__container-ba-image img {
     position: absolute;
@@ -4546,7 +4608,7 @@ body {
     margin: 0 1em 1em 0;
   }
   .work__images.img5 .bgImg {
-    background: url("../img/man_with_gun.jpg");
+    background: url("../img/aang-studio_session.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -4931,7 +4993,7 @@ body {
     margin-top: 200px;
     margin-left: -2em;
     margin-right: 2em;
-    background-image: url("/dist/img/man_with_gun.jpg");
+    background-image: url("/dist/img/gkaz-pou_hsoun(shooting).jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -4965,12 +5027,10 @@ body {
     margin-top: -400px;
   }
   .photography .photography__container-header:last-child {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1/2;
+    display: none;
+  }
+  .photography .photography__container #photoEditing {
+    display: none;
   }
   .photography .photography__container-text {
     -ms-grid-column: 2;
@@ -4993,19 +5053,31 @@ body {
     grid-row: 2/3;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: minmax(10%, auto) 1fr 1fr minmax(10%, auto);
+        grid-template-columns: minmax(10%, auto) 1fr 1fr minmax(10%, auto);
     gap: 2em;
   }
   .photography .photography__container-ba-image {
-    width: 100%;
-    height: 500px;
+    max-width: 500px;
+    height: 800px;
     position: relative;
-    overflow: hidden;
-    background: gray;
-    -ms-grid-column: 1;
+    overflow: visible;
+    -ms-grid-column: 2;
     -ms-grid-column-span: 1;
-    grid-column: 1/2;
+    grid-column: 2/3;
+    margin-left: auto;
+  }
+  .photography .photography__container-ba-image::before {
+    content: 'photo editing';
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: 100%;
+    height: 100px;
+    font-family: "Neutral Face", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    z-index: 100;
   }
   .photography .photography__container-ba-image img {
     position: absolute;
@@ -5042,7 +5114,7 @@ body {
     cursor: pointer;
     content: url("/dist/img/ba2.svg");
     position: absolute;
-    bottom: 0;
+    top: 50%;
   }
   .photography .photography__container-ba-before {
     position: relative;
@@ -5122,7 +5194,7 @@ body {
     display: flex;
     gap: 1em;
     width: 1000%;
-    margin-left: -100%;
+    margin-left: -200%;
   }
   .videography .boxes {
     position: relative;
@@ -5313,6 +5385,18 @@ body {
         align-self: end;
     margin-top: -60%;
   }
+  .work-menu .feels:first-child {
+    width: 70%;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+  .work-menu .feels:nth-child(2) {
+    width: 50%;
+    margin-top: -50%;
+    margin-left: 0;
+    z-index: 2;
+  }
   .work-menu .jtf:first-child {
     width: 80%;
     -ms-flex-item-align: end;
@@ -5350,6 +5434,18 @@ body {
         align-self: end;
     margin-top: -10%;
     z-index: 3;
+  }
+  .work-menu .poseidi:first-child {
+    width: 100%;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+  .work-menu .poseidi:nth-child(2) {
+    width: 90%;
+    margin-top: -10%;
+    margin-left: 10%;
+    z-index: 2;
   }
   .work-menu__container {
     padding-top: 20%;

@@ -103,6 +103,30 @@
         }
 
         &:nth-child(5){
+                
+            img{
+                // content: url('/dist/img/FY_x_LilBarty-TRAPNEST2015.png');
+                width: 100%;
+            }
+        }
+
+        &:nth-child(6){
+                
+            img{
+                // content: url('/dist/img/FY_x_LilBarty-TRAPNEST2015.png');
+                width: 100%;
+            }
+        }
+
+        &:nth-child(7){
+                
+            img{
+                // content: url('/dist/img/FY_x_LilBarty-TRAPNEST2015.png');
+                width: 100%;
+            }
+        }
+
+        &:nth-child(8){
 
             .work-menu__card-image{
                 display: flex;
@@ -132,7 +156,30 @@
             }
         }
 
-        &:nth-child(6){
+        &:nth-child(9){
+
+            .work-menu__card-image{
+                display: flex;
+                flex-direction: column;
+            }
+                
+            img{
+
+                &:first-child{
+                    // content: url('/dist/img/indigo_front_logo.jpg');
+                    width: 70%;
+                    align-self: end;
+                }
+
+                &:nth-child(2){
+                    // content: url('/dist/img/indigo_front.png');
+                    width: 100%;
+                    margin-top: -2em;
+                }
+            }
+        }
+
+        &:nth-child(10){
 
             .work-menu__card-image{
                 display: flex;
@@ -166,7 +213,7 @@
             }
         }
 
-        &:nth-child(7){
+        &:nth-child(11){
 
             .work-menu__card-image{
                 display: flex;
@@ -205,6 +252,33 @@
                     margin-left: -2em;
                     z-index: 2;
                 }
+            }
+        }
+
+        &:nth-child(12){
+
+            .work-menu__card-image{
+                display: flex;
+                flex-direction: column;
+            }
+                
+            img{
+
+                &:first-child{
+                    // content: url('/dist/img/joker_twoface_live1.jpg');
+                    width: 100%;
+                    align-self: end;
+                    opacity: 1;
+                }
+
+                &:nth-child(2){
+                    // content: url('/dist/img/joker_twoface_live2.jpg');
+                    width: 90%;
+                    margin-top: -2em;
+                    margin-left: 2em;
+                    z-index: 2;
+                }
+
             }
         }
 
