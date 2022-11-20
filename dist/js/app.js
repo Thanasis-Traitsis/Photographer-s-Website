@@ -179,7 +179,7 @@ function contentAnimation() {
   
   //================================================================================================================== HOME
   
-  if(window.location.pathname == '/index.html' || window.location.pathname == 'https://glittering-gingersnap-097210.netlify.app/') {
+  if(window.location.pathname == '/index.html' || window.location.pathname == 'https://glittering-gingersnap-097210.netlify.app') {
 
     window.scrollTo(0,0);
   
