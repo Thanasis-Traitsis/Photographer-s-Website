@@ -925,6 +925,7 @@
   border-radius: 50%;
   background: #21caff;
   overflow: hidden;
+  z-index: -1;
 }
 
 .services__percentage-box-number {
@@ -2890,6 +2891,7 @@ p span {
     border-radius: 50%;
     background: #21caff;
     overflow: hidden;
+    z-index: -1;
   }
   .services__percentage-box-number {
     position: absolute;
@@ -4417,6 +4419,7 @@ p span {
     border-radius: 50%;
     background: #21caff;
     overflow: hidden;
+    z-index: -1;
   }
   .services__percentage-box-number {
     position: absolute;
