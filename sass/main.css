@@ -1819,6 +1819,7 @@ p span {
     justify-content: end;
     align-items: center;
     gap: 0.5em;
+    margin-top: 10px;
   }
   .nav__list-item.active a {
     color: #bd9e81;
