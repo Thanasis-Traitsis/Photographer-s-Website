@@ -110,84 +110,86 @@ pageTransition = () => {
 
 }
 
-function delay(n){
-  n = n || 2000;
-  return new Promise(done => {
-    setTimeout(() => {
-      done();
-    }, n);
-  });
-}
+// function delay(n){
+//   n = n || 2000;
+//   return new Promise(done => {
+//     setTimeout(() => {
+//       done();
+//     }, n);
+//   });
+// }
 
-barba.init({
-  sync: true,
+// barba.init({
+//   sync: true,
 
-  transitions: [  
-    {
-      async leave(data) {
-        const done = this.async();
+//   transitions: [  
+//     {
+//       async leave(data) {
+//         const done = this.async();
 
-        pageTransition();
-        await delay(1500);
-        done();
-      },
+//         pageTransition();
+//         await delay(1500);
+//         done();
+//       },
 
-      async enter(data){
-        contentAnimation();
-        let href = data.current.url.href;
-        let currenthref = data.next.url.href;
+//       async enter(data){
+//         contentAnimation();
+//         let href = data.current.url.href;
+//         let currenthref = data.next.url.href;
 
-        const header_contact1 = ["LET'S", "HIRE", "LET'S"];
-        const header_contact2 = ["TALK", "ME", "WORK"];
+//         const header_contact1 = ["LET'S", "HIRE", "LET'S"];
+//         const header_contact2 = ["TALK", "ME", "WORK"];
 
-        var contactHeader = document.querySelector(".contact-main__header");
+//         var contactHeader = document.querySelector(".contact-main__header");
         
-        if(href == "http://127.0.0.1:5500/index.html" && currenthref == "http://127.0.0.1:5500/contact.html" ){
-          contactHeader.children[0].innerHTML = header_contact1[0];
-          contactHeader.children[1].innerHTML = header_contact2[0];
-        }
+//         if(href == "http://127.0.0.1:5500/index.html" && currenthref == "http://127.0.0.1:5500/contact.html" ){
+//           contactHeader.children[0].innerHTML = header_contact1[0];
+//           contactHeader.children[1].innerHTML = header_contact2[0];
+//         }
 
-        else if(href == 'http://127.0.0.1:5500/services.html' && currenthref == "http://127.0.0.1:5500/contact.html" ){
-          contactHeader.children[0].innerHTML = header_contact1[1];
-          contactHeader.children[1].innerHTML = header_contact2[1];
-          contactHeader.children[0].style.marginLeft = "20px";
-          contactHeader.children[1].style.marginRight = "50px";
-        }
+//         else if(href == 'http://127.0.0.1:5500/services.html' && currenthref == "http://127.0.0.1:5500/contact.html" ){
+//           contactHeader.children[0].innerHTML = header_contact1[1];
+//           contactHeader.children[1].innerHTML = header_contact2[1];
+//           contactHeader.children[0].style.marginLeft = "20px";
+//           contactHeader.children[1].style.marginRight = "50px";
+//         }
 
-        else if(href == 'http://127.0.0.1:5500/work.html' && currenthref == "http://127.0.0.1:5500/contact.html" ){
-          contactHeader.children[0].innerHTML = header_contact1[2];
-          contactHeader.children[1].innerHTML = header_contact2[2];
-        }        
-      },
+//         else if(href == 'http://127.0.0.1:5500/work.html' && currenthref == "http://127.0.0.1:5500/contact.html" ){
+//           contactHeader.children[0].innerHTML = header_contact1[2];
+//           contactHeader.children[1].innerHTML = header_contact2[2];
+//         }        
+//       },
 
-      async once(data){
-        contentAnimation();
-      },
-    }
-  ],
-})
+//       async once(data){
+//         contentAnimation();
+//         console.log(data);
+//       },
+//     }
+//   ],
+// })
 
+window.onload = contentAnimation();
 
-function contentAnimation() {
-  reportWindowSize;
-
-  const navListItems = document.querySelectorAll(".nav__list-item");
+const navListItems = document.querySelectorAll(".nav__list-item");
   const navListHome = document.querySelector("#home-link");
   const navListServices = document.querySelector("#services-link");
   const navListWork = document.querySelector("#work-link");
   const navListContact = document.querySelector("#contact-link");
+
+function contentAnimation() {
+  reportWindowSize;
   
   //================================================================================================================== HOME
   
-  if(window.location.pathname == '/index.html' || window.location.pathname == 'https://glittering-gingersnap-097210.netlify.app') {
+  if(window.location.pathname == '/index.html' ) {
 
     window.scrollTo(0,0);
   
-    navListItems.forEach( item =>{
-      item.classList.remove("active");
-    });
+  //   navListItems.forEach( item =>{
+  //     item.classList.remove("active");
+  //   });
   
-  navListHome.classList.add("active");
+  // navListHome.classList.add("active");
 
     //======================================================== LOADING SCREEN
     // const loadingScreen = document.querySelector("#loading-screen");
@@ -254,110 +256,6 @@ function contentAnimation() {
       tlAbout.fromTo(".about__items-camera", {x: "-500%"}, {x: "0", duration: 1});
       tlAbout.fromTo(".about__items-me", {x: "-500%"}, {x: "0", duration: 1}, "<50%")
     }
-    
-    //======================================================== SERVICES TOOLS ANIMATIONS
-    
-    const tlServices= gsap.timeline({
-      scrollTrigger: {
-          trigger: '.services',
-          // markers: {startColor: 'pink', endColor: 'pink'},
-          scrub: false,
-          start: '-10%',
-      }
-    });
-    
-    const wavetl = gsap.timeline({
-      defaults: { duration: 5, ease: "circ.out"}
-    })
-    
-    const waveContainer = document.querySelector(".services__percentage-box");
-    const waveBox = document.querySelector(".services__percentage-box-wave");
-    
-    const box1 = document.querySelector("#fillbox1");
-    const iconTools = document.querySelectorAll(".services__tools-icon");
-    const iconFill = document.querySelectorAll(".services__tools-icon-fill");
-    
-    const percentageCircle = document.querySelector(".services__percentage");
-    const percentageNumber = document.querySelector(".services__percentage-box-number");
-    const percentageNumberSpan = document.querySelector(".services__percentage-box-number span");
-    
-    var bgFillColor = "";
-    
-    iconTools.forEach(tool =>{
-      tool.addEventListener("click", ()=>{
-        gsap.to(iconFill, {scaleY: 0, ease: "Power3.easeOut"});
-        gsap.to(tool.children[0], {scaleY: 1, ease: "Power3.easeOut"}, "<");
-    
-        bgFillColor = tool.children[0].id;
-    
-        if(bgFillColor == "fillbox1"){
-          gsap.to(waveContainer, {backgroundColor: "#21caff", ease: "slow(0.7, 0.7, false)"} )
-          gsap.to(waveBox, {y: "-77%", ease: "slow(0.7, 0.7, false)"} )
-          percentageNumber.innerHTML = "91%";
-        }
-    
-        else if(bgFillColor == "fillbox2") {
-          gsap.to(waveContainer, {backgroundColor: "#ea77ff", ease: "slow(0.7, 0.7, false)"} )
-          gsap.to(waveBox, {y: "-73%", ease: "slow(0.7, 0.7, false)"} )
-          percentageNumber.innerHTML = "85%";
-        }
-    
-        else if(bgFillColor == "fillbox3") {
-          gsap.to(waveContainer, {backgroundColor: "#31a8ff", ease: "slow(0.7, 0.7, false)"} )
-          gsap.to(waveBox, { y: "-70%", ease: "slow(0.7, 0.7, false)"} )
-          percentageNumber.innerHTML = "80%";
-        }
-    
-        // else if(bgFillColor == "fillbox4") {
-        //   gsap.to(waveContainer, {backgroundColor: "#ff9a00", ease: "slow(0.7, 0.7, false)"} )
-        //   gsap.to(waveBox, { y: "-55%", ease: "slow(0.7, 0.7, false)"} )
-        //   percentageNumber.innerHTML = "60%";
-        // }
-      })
-    
-    })
-    
-    tlServices.from(percentageNumberSpan, {
-      textContent: 0,
-      duration: 5,
-      ease: Power3.easeOut,
-      snap: { textContent: 1 },
-      stagger: 1,
-    });
-    tlServices.to(box1, {scaleY: 1,duration: 1, ease: "Power3.easeOut"}, "<");
-    tlServices.to(waveBox, {rotate: "600%", y: "-77%", duration: 5, ease: "circ.out"}, "<");
-    tlServices.to(waveBox, {rotate: "360deg",duration: 10, ease: "none",yoyo: true, repeat: -1}, "<");
-    
-    //======================================================== SERVICES PERCENTAGE MOVEMENT
-    
-      waveContainer.addEventListener('mousemove', (e) =>{
-        const position = percentageNumber.getBoundingClientRect();
-      
-        // pageX = the page width
-        // position.left = the distance of the element from the left of the screen
-        // position.width = the width of the element
-        const x = e.pageX - position.left - position.width/2;
-        const y = e.pageY - position.bottom - position.height/2;
-      
-        //Set the number position
-        const x2 = x * .05;
-        var y2 = 0;
-        if(window.innerWidth < 1200){
-          y2 = (y * .05) - 98;
-        }
-        else{
-          y2 = (y * .05) - 130;
-        }
-      
-        gsap.to(percentageNumber, {transform: 'translateX('+x2+'%) translateY('+y2+'%)', ease: "Power3.easeOut"});
-      
-      });
-      
-      waveContainer.addEventListener('mouseout', () =>{
-      
-        gsap.to(percentageNumber, {transform: 'translateX(0%) translateY(0%)', ease: "Power3.easeOut"});
-      
-      });
     
     //======================================================== WORK IMAGES
     
@@ -437,11 +335,11 @@ function contentAnimation() {
     window.scrollTo(0,0);
 
 
-      navListItems.forEach( item =>{
-        item.classList.remove("active");
-      });
+    //   navListItems.forEach( item =>{
+    //     item.classList.remove("active");
+    //   });
     
-    navListServices.classList.add("active");
+    // navListServices.classList.add("active");
   
     //======================================================== SERVICES MAIN
     const welcomeServices = gsap.timeline({
@@ -622,11 +520,11 @@ function contentAnimation() {
 
     window.scrollTo(0,0);
   
-      navListItems.forEach( item =>{
-        item.classList.remove("active");
-      });
+    //   navListItems.forEach( item =>{
+    //     item.classList.remove("active");
+    //   });
     
-    navListWork.classList.add("active");
+    // navListWork.classList.add("active");
   
     //======================================================== WORK MENU
     
@@ -703,11 +601,11 @@ function contentAnimation() {
   
     window.scrollTo(0,0);
 
-      navListItems.forEach( item =>{
-        item.classList.remove("active");
-      });
+    //   navListItems.forEach( item =>{
+    //     item.classList.remove("active");
+    //   });
     
-    navListContact.classList.add("active");
+    // navListContact.classList.add("active");
     
     // const header_contact1 = ["LET'S", "HIRE", "LET'S"];
     // const header_contact2 = ["TALK", "ME", "WORK"];
@@ -826,11 +724,11 @@ function contentAnimation() {
   else {
     window.scrollTo(0,0);
   
-    navListItems.forEach( item =>{
-      item.classList.remove("active");
-    });
+  //   navListItems.forEach( item =>{
+  //     item.classList.remove("active");
+  //   });
   
-  navListHome.classList.add("active");
+  // navListHome.classList.add("active");
 
     //======================================================== LOADING SCREEN
     // const loadingScreen = document.querySelector("#loading-screen");
