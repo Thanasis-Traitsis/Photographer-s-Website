@@ -142,19 +142,19 @@ barba.init({
 
         var contactHeader = document.querySelector(".contact-main__header");
         
-        if(href == "http://127.0.0.1:5500/index.html" && currenthref == "http://127.0.0.1:5500/contact.html" ){
+        if(href == "https://glittering-gingersnap-097210.netlify.app/index.html" && currenthref == "https://glittering-gingersnap-097210.netlify.app/contact.html" ){
           contactHeader.children[0].innerHTML = header_contact1[0];
           contactHeader.children[1].innerHTML = header_contact2[0];
         }
 
-        else if(href == 'http://127.0.0.1:5500/services.html' && currenthref == "http://127.0.0.1:5500/contact.html" ){
+        else if(href == 'https://glittering-gingersnap-097210.netlify.app/services.html' && currenthref == "https://glittering-gingersnap-097210.netlify.app/contact.html" ){
           contactHeader.children[0].innerHTML = header_contact1[1];
           contactHeader.children[1].innerHTML = header_contact2[1];
           contactHeader.children[0].style.marginLeft = "20px";
           contactHeader.children[1].style.marginRight = "50px";
         }
 
-        else if(href == 'http://127.0.0.1:5500/work.html' && currenthref == "http://127.0.0.1:5500/contact.html" ){
+        else if(href == 'https://glittering-gingersnap-097210.netlify.app/work.html' && currenthref == "https://glittering-gingersnap-097210.netlify.app/contact.html" ){
           contactHeader.children[0].innerHTML = header_contact1[2];
           contactHeader.children[1].innerHTML = header_contact2[2];
         }        
@@ -821,6 +821,255 @@ function contentAnimation() {
     });
     
     
+    }
+   
+    else {
+      window.scrollTo(0,0);
+  
+    navListItems.forEach( item =>{
+      item.classList.remove("active");
+    });
+  
+  navListHome.classList.add("active");
+
+    //======================================================== LOADING SCREEN
+    // const loadingScreen = document.querySelector("#loading-screen");
+    // const loadingLines = document.querySelector(".circle5");
+    // const loadingLines2 = document.querySelector(".circle52");
+    // const loadingText = document.querySelectorAll(".loading-screen__text p");
+
+    // gsap.to(loadingLines, {rotate: "360deg", repeat: -1, duration: 2, ease: "none"});
+    // gsap.to(loadingLines2, {rotate: "-360deg", repeat: -1, duration: 2, ease: "none"});
+
+    // window.addEventListener("load", function(){
+    //   // gsap.to(loadingLines, {rotate: "360deg", repeat: 1, duration: 2, ease: "none"});
+    //   // gsap.to(loadingLines2, {rotate: "-360deg", repeat: 1, duration: 2, ease: "none"});
+    //   // gsap.fromTo(loadingText, {y: "-200%"}, {y: 0, stagger: .5,ease: "Power3.easeOut"}, "<100%");
+    //   gsap.to(loadingScreen, {y: "-100%", delay: .5});
+    //   gsap.fromTo(body, {overflow: "hidden"}, {overflow: "visible"}, "<");
+    // });
+  
+    //======================================================== WELCOME PAGE ANIMATIONS
+    const welcome = gsap.timeline({
+      defaults: { duration: 2.5, ease: "Power3.easeOut"}
+    })
+    
+    const welcomeArrow = document.querySelector(".welcome__arrow-down > img");
+    const introHeaders = document.querySelectorAll(".welcome__text-box > p");
+    const introImage = document.querySelector(".welcome__img > img");
+    
+    welcome.fromTo(introImage, {x: "110%"}, {x: "0", duration: 1.5, delay: 2.5});
+    welcome.fromTo(introHeaders, {x: "200%"}, {x: "0", duration: 1.25, stagger: .25} , "<25%");
+    welcome.to(welcomeArrow, {rotate: "+135deg", duration: 1});
+    
+    //======================================================== TRUSTED BY
+    
+    const tlScroll = gsap.timeline({
+      scrollTrigger: {
+          trigger: '.trustedby',
+          // markers: {startColor: 'pink', endColor: 'pink'},
+          scrub: false,
+          start: '-100%',
+      }
+    });
+    
+    tlScroll.fromTo('.trustedby__companies-icon', {y: "60%", opacity: 0}, {y: "0", opacity: 1, stagger: .5});
+    // tlScroll.fromTo('.about', {opacity: '.5'},{opacity: '1'});
+    
+    //======================================================== ABOUT ANIMATIONS
+    
+    const tlAbout = gsap.timeline({
+      scrollTrigger: {
+          trigger: '.about',
+          // markers: {startColor: 'pink', endColor: 'pink'},
+          scrub: false,
+          start: '-50%',
+          end: '-20%'
+      }
+    });
+    
+    if(window.innerWidth < 1200){
+    tlAbout.fromTo(".about__items-camera", {x: "-500%"}, {x: "0", duration: 1});
+    tlAbout.fromTo(".about__items-me", {x: "500%"}, {x: "0", duration: 1}, "<50%")
+    }
+
+    else{
+      tlAbout.fromTo(".about__items-camera", {x: "-500%"}, {x: "0", duration: 1});
+      tlAbout.fromTo(".about__items-me", {x: "-500%"}, {x: "0", duration: 1}, "<50%")
+    }
+    
+    //======================================================== SERVICES TOOLS ANIMATIONS
+    
+    const tlServices= gsap.timeline({
+      scrollTrigger: {
+          trigger: '.services',
+          // markers: {startColor: 'pink', endColor: 'pink'},
+          scrub: false,
+          start: '-10%',
+      }
+    });
+    
+    const wavetl = gsap.timeline({
+      defaults: { duration: 5, ease: "circ.out"}
+    })
+    
+    const waveContainer = document.querySelector(".services__percentage-box");
+    const waveBox = document.querySelector(".services__percentage-box-wave");
+    
+    const box1 = document.querySelector("#fillbox1");
+    const iconTools = document.querySelectorAll(".services__tools-icon");
+    const iconFill = document.querySelectorAll(".services__tools-icon-fill");
+    
+    const percentageCircle = document.querySelector(".services__percentage");
+    const percentageNumber = document.querySelector(".services__percentage-box-number");
+    const percentageNumberSpan = document.querySelector(".services__percentage-box-number span");
+    
+    var bgFillColor = "";
+    
+    iconTools.forEach(tool =>{
+      tool.addEventListener("click", ()=>{
+        gsap.to(iconFill, {scaleY: 0, ease: "Power3.easeOut"});
+        gsap.to(tool.children[0], {scaleY: 1, ease: "Power3.easeOut"}, "<");
+    
+        bgFillColor = tool.children[0].id;
+    
+        if(bgFillColor == "fillbox1"){
+          gsap.to(waveContainer, {backgroundColor: "#21caff", ease: "slow(0.7, 0.7, false)"} )
+          gsap.to(waveBox, {y: "-77%", ease: "slow(0.7, 0.7, false)"} )
+          percentageNumber.innerHTML = "91%";
+        }
+    
+        else if(bgFillColor == "fillbox2") {
+          gsap.to(waveContainer, {backgroundColor: "#ea77ff", ease: "slow(0.7, 0.7, false)"} )
+          gsap.to(waveBox, {y: "-73%", ease: "slow(0.7, 0.7, false)"} )
+          percentageNumber.innerHTML = "85%";
+        }
+    
+        else if(bgFillColor == "fillbox3") {
+          gsap.to(waveContainer, {backgroundColor: "#31a8ff", ease: "slow(0.7, 0.7, false)"} )
+          gsap.to(waveBox, { y: "-70%", ease: "slow(0.7, 0.7, false)"} )
+          percentageNumber.innerHTML = "80%";
+        }
+    
+        // else if(bgFillColor == "fillbox4") {
+        //   gsap.to(waveContainer, {backgroundColor: "#ff9a00", ease: "slow(0.7, 0.7, false)"} )
+        //   gsap.to(waveBox, { y: "-55%", ease: "slow(0.7, 0.7, false)"} )
+        //   percentageNumber.innerHTML = "60%";
+        // }
+      })
+    
+    })
+    
+    tlServices.from(percentageNumberSpan, {
+      textContent: 0,
+      duration: 5,
+      ease: Power3.easeOut,
+      snap: { textContent: 1 },
+      stagger: 1,
+    });
+    tlServices.to(box1, {scaleY: 1,duration: 1, ease: "Power3.easeOut"}, "<");
+    tlServices.to(waveBox, {rotate: "600%", y: "-77%", duration: 5, ease: "circ.out"}, "<");
+    tlServices.to(waveBox, {rotate: "360deg",duration: 10, ease: "none",yoyo: true, repeat: -1}, "<");
+    
+    //======================================================== SERVICES PERCENTAGE MOVEMENT
+    
+      waveContainer.addEventListener('mousemove', (e) =>{
+        const position = percentageNumber.getBoundingClientRect();
+      
+        // pageX = the page width
+        // position.left = the distance of the element from the left of the screen
+        // position.width = the width of the element
+        const x = e.pageX - position.left - position.width/2;
+        const y = e.pageY - position.bottom - position.height/2;
+      
+        //Set the number position
+        const x2 = x * .05;
+        var y2 = 0;
+        if(window.innerWidth < 1200){
+          y2 = (y * .05) - 98;
+        }
+        else{
+          y2 = (y * .05) - 130;
+        }
+      
+        gsap.to(percentageNumber, {transform: 'translateX('+x2+'%) translateY('+y2+'%)', ease: "Power3.easeOut"});
+      
+      });
+      
+      waveContainer.addEventListener('mouseout', () =>{
+      
+        gsap.to(percentageNumber, {transform: 'translateX(0%) translateY(0%)', ease: "Power3.easeOut"});
+      
+      });
+    
+    //======================================================== WORK IMAGES
+    
+    const workImagesDetails = document.querySelectorAll(".work__images-details");
+    const workImagesDetailsHeader = document.querySelectorAll(".work__images-details h1");
+    const workImagesDetailsLine = document.querySelectorAll(".work__images-details div");
+    const workImagesDetailsButton = document.querySelectorAll(".work__images-details a");
+    
+    const workImages = document.querySelectorAll(".work__images");
+    const workBackgroundImages = document.querySelectorAll(".bgImg");
+    
+    gsap.to(workImagesDetailsHeader, {y: "-100%", duration: .0001})
+    gsap.to(workImagesDetailsLine, {scaleX: "0", duration: .0001})
+    gsap.to(workImagesDetailsButton, {y: "100%", duration: .0001})
+    
+    workImages.forEach(workImg => {
+      workImg.addEventListener("mouseover", () =>{
+    
+        gsap.to(workImg.children[1].children[0], {y: "0"})
+        gsap.to(workImg.children[1].children[2], {y: "0"})
+        gsap.to(workImg.children[1].children[1], {scaleX: "1"})
+      })
+    })
+    
+    workImages.forEach(workImg => {
+      workImg.addEventListener("mouseout", () =>{
+
+        gsap.to(workImg.children[1].children[1], {scaleX: "0"})
+        gsap.to(workImg.children[1].children[0], {y: "-100%"})
+        gsap.to(workImg.children[1].children[2], {y: "100%"})
+      })
+    })
+    
+    //======================================================== CAROUSEL TESTIMONIALS
+
+    function reportWindowSize() {
+       const windowX = window.innerWidth;
+       console.log(windowX)
+    }
+    
+    window.onresize = reportWindowSize;
+
+      var swiper = new Swiper(".mySwiper", {
+        grabCursor: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 650px
+          650: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          // when window width is >= 1200px
+          1200: {
+            slidesPerView: 2,
+            spaceBetween: 50
+          },
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function(index, className) {
+            return '\
+              <div class="box ' + className + '">\
+              </div>';
+          },
+        },
+      });
     }
     
 }
