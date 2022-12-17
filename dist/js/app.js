@@ -190,21 +190,21 @@ function contentAnimation() {
   navListHome.classList.add("active");
 
     //======================================================== LOADING SCREEN
-    const loadingScreen = document.querySelector("#loading-screen");
-    const loadingLines = document.querySelector(".circle5");
-    const loadingLines2 = document.querySelector(".circle52");
-    const loadingText = document.querySelectorAll(".loading-screen__text p");
+    // const loadingScreen = document.querySelector("#loading-screen");
+    // const loadingLines = document.querySelector(".circle5");
+    // const loadingLines2 = document.querySelector(".circle52");
+    // const loadingText = document.querySelectorAll(".loading-screen__text p");
 
-    gsap.to(loadingLines, {rotate: "360deg", repeat: -1, duration: 2, ease: "none"});
-    gsap.to(loadingLines2, {rotate: "-360deg", repeat: -1, duration: 2, ease: "none"});
+    // gsap.to(loadingLines, {rotate: "360deg", repeat: -1, duration: 2, ease: "none"});
+    // gsap.to(loadingLines2, {rotate: "-360deg", repeat: -1, duration: 2, ease: "none"});
 
-    window.addEventListener("load", function(){
-      // gsap.to(loadingLines, {rotate: "360deg", repeat: 1, duration: 2, ease: "none"});
-      // gsap.to(loadingLines2, {rotate: "-360deg", repeat: 1, duration: 2, ease: "none"});
-      // gsap.fromTo(loadingText, {y: "-200%"}, {y: 0, stagger: .5,ease: "Power3.easeOut"}, "<100%");
-      gsap.to(loadingScreen, {y: "-100%", delay: .5});
-      gsap.fromTo(body, {overflow: "hidden"}, {overflow: "visible"}, "<");
-    });
+    // window.addEventListener("load", function(){
+    //   // gsap.to(loadingLines, {rotate: "360deg", repeat: 1, duration: 2, ease: "none"});
+    //   // gsap.to(loadingLines2, {rotate: "-360deg", repeat: 1, duration: 2, ease: "none"});
+    //   // gsap.fromTo(loadingText, {y: "-200%"}, {y: 0, stagger: .5,ease: "Power3.easeOut"}, "<100%");
+    //   gsap.to(loadingScreen, {y: "-100%", delay: .5});
+    //   gsap.fromTo(body, {overflow: "hidden"}, {overflow: "visible"}, "<");
+    // });
   
     //======================================================== WELCOME PAGE ANIMATIONS
     const welcome = gsap.timeline({
