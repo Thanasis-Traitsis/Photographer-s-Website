@@ -817,7 +817,7 @@
   height: 100%;
 }
 .work .img3 .bgImg {
-  background: url("../img/Drew_x_Gkaz-Sorry.png");
+  background: url("../img/Drew_x_Gkaz-Sorry.webp");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -2305,7 +2305,7 @@ p span {
     height: 100%;
   }
   .work .img3 .bgImg {
-    background: url("../img/Drew_x_Gkaz-Sorry.png");
+    background: url("../img/Drew_x_Gkaz-Sorry.webp");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -3544,7 +3544,7 @@ p span {
     margin: 0 1em 1em 0;
   }
   .work__images.img3 .bgImg {
-    background: url("../img/Drew_x_Gkaz-Sorry.png");
+    background: url("../img/Drew_x_Gkaz-Sorry.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
