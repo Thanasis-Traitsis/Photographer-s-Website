@@ -809,7 +809,7 @@ function contentAnimation() {
     }
 
     
-    GraphicDesingScroll.fromTo(gdHeaderOffers, {y: "-250%"}, {y: "0"});
+    GraphicDesingScroll.fromTo(gdHeaderOffers, {y: "-280%"}, {y: "0"});
     GraphicDesingScroll.fromTo(gdHeaderNumber, {x: "-500%"}, {x: "0"});
     
     //======================================================== CAROUSEL GRAPHIC DESIGN PACKAGE
