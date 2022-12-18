@@ -735,6 +735,7 @@ p span{
                 border-radius: 50%;
                 background: #21caff;
                 overflow: hidden;
+                z-index: -1;
     
                 &-number{
                     position: absolute;
@@ -1604,6 +1605,7 @@ p span{
     
             &-text{
                 color: white;
+                width: 60%;
             }
     
     
@@ -2323,6 +2325,7 @@ p span{
                 border-radius: 50%;
                 background: #21caff;
                 overflow: hidden;
+                z-index: -1;
     
                 &-number{
                     position: absolute;
@@ -3295,6 +3298,11 @@ p span{
 
     //======================================================== WORK MENU
     .work-menu{
+
+        &-text{
+            color: white;
+            width: 60%;
+        }
 
         .karma{
 

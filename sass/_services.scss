@@ -146,6 +146,7 @@
             border-radius: 50%;
             background: #21caff;
             overflow: hidden;
+            z-index: -1;
 
             &-number{
                 position: absolute;

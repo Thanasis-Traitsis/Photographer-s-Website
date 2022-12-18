@@ -364,7 +364,7 @@
   top: 0;
   left: 0;
   z-index: -1;
-  rotate: -135deg;
+  /* rotate: -135deg; */
   border: 2px solid white;
   border-radius: 50%;
   content: url("/dist/img/scroll.svg");
@@ -659,6 +659,7 @@
   border-radius: 50%;
   background: #21caff;
   overflow: hidden;
+  z-index: -1;
 }
 .services__percentage-box-number {
   position: absolute;
@@ -1283,6 +1284,8 @@
 }
 .work-menu__card-text {
   color: white;
+  width: 60%;
+
 }
 .work-menu__card-image {
   overflow: hidden;
@@ -2161,6 +2164,7 @@ p span {
     border-radius: 50%;
     background: #21caff;
     overflow: hidden;
+    z-index: -1;
   }
   .services__percentage-box-number {
     position: absolute;
@@ -2856,6 +2860,7 @@ p span {
   }
   .work-menu__card-text {
     color: white;
+    width: 60%;
   }
   .work-menu__card-image {
     overflow: hidden;
@@ -3420,6 +3425,7 @@ p span {
     border-radius: 50%;
     background: #21caff;
     overflow: hidden;
+    z-index: -1;
   }
   .services__percentage-box-number {
     position: absolute;
@@ -4317,7 +4323,7 @@ p span {
   .work-menu__card-text {
     color: white;
     font-size: 1.1rem;
-    width: 100%;
+    width: 60%;
   }
   .work-menu__card-image {
     display: none;
