@@ -143,19 +143,19 @@ barba.init({
 
         var contactHeader = document.querySelector(".contact-main__header");
         
-        if(href == "https://glittering-gingersnap-097210.netlify.app/index.html" && currenthref == "https://glittering-gingersnap-097210.netlify.app/contact.html" ){
+        if(href == "https://marioskgm.netlify.app/index.html" && currenthref == "https://marioskgm.netlify.app/contact.html" ){
           contactHeader.children[0].innerHTML = header_contact1[0];
           contactHeader.children[1].innerHTML = header_contact2[0];
         }
 
-        else if(href == 'https://glittering-gingersnap-097210.netlify.app/services.html' && currenthref == "https://glittering-gingersnap-097210.netlify.app/contact.html" ){
+        else if(href == 'https://marioskgm.netlify.app/services.html' && currenthref == "https://marioskgm.netlify.app/contact.html" ){
           contactHeader.children[0].innerHTML = header_contact1[1];
           contactHeader.children[1].innerHTML = header_contact2[1];
           contactHeader.children[0].style.marginLeft = "20px";
           contactHeader.children[1].style.marginRight = "50px";
         }
 
-        else if(href == 'https://glittering-gingersnap-097210.netlify.app/work.html' && currenthref == "https://glittering-gingersnap-097210.netlify.app/contact.html" ){
+        else if(href == 'https://marioskgm.netlify.app/work.html' && currenthref == "https://marioskgm.netlify.app/contact.html" ){
           contactHeader.children[0].innerHTML = header_contact1[2];
           contactHeader.children[1].innerHTML = header_contact2[2];
         }        
