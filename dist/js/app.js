@@ -143,7 +143,7 @@ barba.init({
 
         var contactHeader = document.querySelector(".contact-main__header");
         
-        if(href == "https://marioskgm.netlify.app") {
+        if(href == "https://marioskgm.netlify.app/") {
               //======================================================== WELCOME PAGE ANIMATIONS
     const welcome = gsap.timeline({
       defaults: { duration: 2.5, ease: "Power3.easeOut"}
