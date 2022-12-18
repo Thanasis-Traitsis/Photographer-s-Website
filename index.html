@@ -482,7 +482,8 @@
     <script src="/dist/js/app.js">
 
         
-function runOnLoad(){//======================================================== WELCOME PAGE ANIMATIONS
+window.onload = function runOnLoad(){
+    //======================================================== WELCOME PAGE ANIMATIONS
 const welcome = gsap.timeline({
     defaults: { duration: 2.5, ease: "Power3.easeOut"}
 })
