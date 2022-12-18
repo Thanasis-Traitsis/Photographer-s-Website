@@ -801,7 +801,7 @@
   transition: all 500ms ease-in-out;
 }
 .work .img1 .bgImg {
-  background-image: url("../img/FY-Lingo.png");
+  background-image: url("../img/FY-Lingo.webp");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -2289,7 +2289,7 @@ p span {
     transition: all 500ms ease-in-out;
   }
   .work .img1 .bgImg {
-    background-image: url("../img/FY-Lingo.png");
+    background-image: url("../img/FY-Lingo.webp");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -3518,7 +3518,7 @@ p span {
     padding-right: 1em;
   }
   .work__images.img1 .bgImg {
-    background-image: url("../img/FY-Lingo.png");
+    background-image: url("../img/FY-Lingo.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
