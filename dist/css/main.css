@@ -1294,6 +1294,10 @@
 .work-menu__card:first-child img {
   width: 100%;
 }
+.work-menu__card:nth-child(2) .work-menu__card-image {
+  display: flex;
+  flex-direction: column;
+}
 .work-menu__card:nth-child(2) img {
   width: 100%;
 }

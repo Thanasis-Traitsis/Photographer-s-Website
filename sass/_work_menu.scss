@@ -79,6 +79,10 @@
         }
 
         &:nth-child(2){
+            .work-menu__card-image{
+                display: flex;
+                flex-direction: column;
+            }
                 
             img{
                 // content: url('/dist/img/TSE-karma_II.webp');
