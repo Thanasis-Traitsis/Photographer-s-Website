@@ -439,7 +439,7 @@ function contentAnimation() {
     
     welcome.fromTo(introImage, {x: "110%"}, {x: "0", duration: 1.5, delay: 2.5});
     welcome.fromTo(introHeaders, {x: "200%"}, {x: "0", duration: 1.25, stagger: .25} , "<25%");
-    welcome.to(welcomeArrow, {rotate: "+135deg", duration: 1});
+    welcome.fromTo(welcomeArrow, {rotate: "-135deg"}, {rotate: "0deg", duration: 1});
     
     //======================================================== TRUSTED BY
     
