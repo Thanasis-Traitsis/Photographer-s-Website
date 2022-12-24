@@ -539,25 +539,25 @@ function contentAnimation() {
     }
     
     //======================================================== VIDEO TAPE BOXES
-    // const tape = document.querySelectorAll(".videography__tape");
+    const tape = document.querySelectorAll(".videography__tape");
     
-    // const videoTapeScroll = gsap.timeline({
-    //   scrollTrigger: {
-    //       trigger: '.videography',
-    //       // markers: {startColor: 'pink', endColor: 'pink'},
-    //       scrub: true,
-    //       start: '-100%',
-    //       end: '150%',
-    //   }
-    // });
+    const videoTapeScroll = gsap.timeline({
+      scrollTrigger: {
+          trigger: '.videography',
+          // markers: {startColor: 'pink', endColor: 'pink'},
+          scrub: true,
+          start: '-100%',
+          end: '150%',
+      }
+    });
     
-    // tape.forEach(tapeBox => {
-    //   for(var i=0; i<100;i++){
-    //      tapeBox.innerHTML+="<div class='boxes'><div/>"; 
-    //   }
-    // });
+    tape.forEach(tapeBox => {
+      for(var i=0; i<100;i++){
+         tapeBox.innerHTML+="<div class='boxes'><div/>"; 
+      }
+    });
     
-    //   videoTapeScroll.to(tape, {x: "-5%"});
+      videoTapeScroll.to(tape, {x: "-5%"});
     
     //======================================================== GRAPHIC DESIGN
     const gdHeaderNumber = document.querySelector(".graphic_design__offer-number svg");
