@@ -444,23 +444,23 @@ function contentAnimation() {
     
     navListServices.classList.add("active");
   
-    //======================================================== SERVICES MAIN
-    const welcomeServices = gsap.timeline({
-      defaults: { duration: 1.2, ease: "Power3.easeOut"}
-    })
+    // //======================================================== SERVICES MAIN
+    // const welcomeServices = gsap.timeline({
+    //   defaults: { duration: 1.2, ease: "Power3.easeOut"}
+    // })
     
-    const servicesImages1 = document.querySelectorAll(".services-main__img-box1");
-    const servicesImages2 = document.querySelectorAll(".services-main__img-box2");
+    // const servicesImages1 = document.querySelectorAll(".services-main__img-box1");
+    // const servicesImages2 = document.querySelectorAll(".services-main__img-box2");
     
-    if(window.innerWidth < 1200){
-      welcomeServices.fromTo(servicesImages1, {x: "100%"}, {x: "0"});
-      welcomeServices.fromTo(servicesImages2, {x: "100%"}, {x: "0"}, "<35%");
-    }
+    // if(window.innerWidth < 1200){
+    //   welcomeServices.fromTo(servicesImages1, {x: "100%"}, {x: "0"});
+    //   welcomeServices.fromTo(servicesImages2, {x: "100%"}, {x: "0"}, "<35%");
+    // }
 
-    else{
-      welcomeServices.fromTo(servicesImages2, {x: "-300%"}, {x: "0"});
-      welcomeServices.fromTo(servicesImages1, {x: "-100%"}, {x: "0"}, "<35%");
-    }
+    // else{
+    //   welcomeServices.fromTo(servicesImages2, {x: "-300%"}, {x: "0"});
+    //   welcomeServices.fromTo(servicesImages1, {x: "-100%"}, {x: "0"}, "<35%");
+    // }
     //======================================================== PHOTO EDITING
     
     const baButton = document.querySelector(".baButton");
