@@ -19,194 +19,11 @@ function reportWindowSize() {
     fsSmall = 1.7;
     fsBigger = 2;
   }
-}
 
-window.onresize = reportWindowSize;
-window.onload = reportWindowSize;
+  var executed = false;
+  if (!executed) {
+    executed = true;
 
-//======================================================== HEADER
-const tl = gsap.timeline({
-  defaults: { duration: 1, ease: "Power3.easeOut"}
-})
-
-const body = document.querySelector("body");
-const navBtn = document.querySelector(".nav__menu");
-const bLine1 = document.querySelector("#burger1");
-const bLine2 = document.querySelector("#burger2");
-const bLine3 = document.querySelector("#burger3");
-const navList = document.querySelector(".nav__list");
-
-let showMenu = false;
-
-navBtn.addEventListener("click", ()=>{
-  if(!showMenu) {
-    tl.to(bLine3, {bottom: 0, duration: .5});
-    tl.to(bLine3, {left: 0, width: "100%", duration: .5});
-    tl.to(navList, {top: "70px"});
-    tl.to(bLine1, {rotate: "45deg", marginBottom: "0", duration: .75}, "<");
-    tl.to(bLine2, {rotate: "-45deg", duration: .75}, "<");
-    body.classList.add("active__menu");
-
-    showMenu = true;
-  }
-
-  else{
-    tl.to(navList, {top: "calc(-100vh + 70px)"});
-    tl.to(bLine1, {rotate: "0", marginBottom: "18px", duration: .75}, "<");
-    tl.to(bLine2, {rotate: "0", duration: .75}, "<");
-    tl.to(bLine3, {left: "auto", width: "30px", duration: .5}, "<85%")
-    tl.to(bLine3, {bottom: "auto",marginTop: "18px", duration: .5});
-    body.classList.remove("active__menu");
-
-    showMenu = false;
-  }
-})
-
-//======================================================== PAGE ANIMATIONS
-pageTransition = () => {
-  var timeline = gsap.timeline();
-
-  timeline.to(".page-transition1", {
-    transformOrigin: "bottom",
-    duration: 1,
-    scaleY: 1
-  });
-
-  timeline.to(".page-transition2", {
-    transformOrigin: "bottom",
-    duration: 1,
-    scaleY: 1
-  });
-
-  timeline.to(".page-transition1", {
-    duration: .8,
-    scaleY: 0,
-    transformOrigin: "top",
-    delay: .3
-  }, "<50%");
-
-  timeline.to(".page-transition2", {
-    duration: .8,
-    scaleY: 0,
-    transformOrigin: "top",
-    delay: .3
-  }, "<1%");
-
-
-  // timeline.set(".page-transition", {
-  //   bottom: "-100%"
-  // });
-
-  if(window.innerWidth < 1200){
-    timeline.to(navList, {top: "calc(-100vh + 70px)"}, "<");
-    timeline.to(bLine1, {rotate: "0", marginBottom: "18px", duration: .75}, "<");
-    timeline.to(bLine2, {rotate: "0", duration: .75}, "<");
-    timeline.to(bLine3, {left: "auto", width: "30px", duration: .5}, "<")
-    timeline.to(bLine3, {bottom: "auto",marginTop: "18px", duration: .5}, "<");
-      body.classList.remove("active__menu");
-  
-      showMenu = false;
-  }
-
-}
-
-function delay(n){
-  n = n || 2000;
-  return new Promise(done => {
-    setTimeout(() => {
-      done();
-    }, n);
-  });
-}
-
-barba.init({
-  sync: true,
-
-  transitions: [  
-    {
-      async leave(data) {
-        const done = this.async();
-
-        pageTransition();
-        await delay(1500);
-        done();
-      },
-
-      async enter(data){
-        contentAnimation();
-        let href = data.current.url.href;
-        let currenthref = data.next.url.href;
-
-        const header_contact1 = ["LET'S", "HIRE", "LET'S"];
-        const header_contact2 = ["TALK", "ME", "WORK"];
-
-        var contactHeader = document.querySelector(".contact-main__header");
-
-        if(href == "https://marioskgm.netlify.app/index.html" && currenthref == "https://marioskgm.netlify.app/contact.html" ){
-          contactHeader.children[0].innerHTML = header_contact1[0];
-          contactHeader.children[1].innerHTML = header_contact2[0];
-        }
-
-        else if(href == 'https://marioskgm.netlify.app/services.html' && currenthref == "https://marioskgm.netlify.app/contact.html" ){
-          contactHeader.children[0].innerHTML = header_contact1[1];
-          contactHeader.children[1].innerHTML = header_contact2[1];
-          contactHeader.children[0].style.marginLeft = "20px";
-          contactHeader.children[1].style.marginRight = "50px";
-        }
-
-        else if(href == 'https://marioskgm.netlify.app/work.html' && currenthref == "https://marioskgm.netlify.app/contact.html" ){
-          contactHeader.children[0].innerHTML = header_contact1[2];
-          contactHeader.children[1].innerHTML = header_contact2[2];
-        }        
-      },
-
-      async once(data){
-        contentAnimation();
-      },
-    }
-  ],
-})
-
-
-function contentAnimation() {
-  reportWindowSize;
-
-  const navListItems = document.querySelectorAll(".nav__list-item");
-  const navListHome = document.querySelector("#home-link");
-  const navListServices = document.querySelector("#services-link");
-  const navListWork = document.querySelector("#work-link");
-  const navListContact = document.querySelector("#contact-link");
-
-  
-  //================================================================================================================== HOME
-  if(window.location.pathname === 'https://marioskgm.netlify.app/') {
-    console.log('hey');
-
-    window.scrollTo(0,0);
-  
-    navListItems.forEach( item =>{
-      item.classList.remove("active");
-    });
-  
-  navListHome.classList.add("active");
-
-    //======================================================== LOADING SCREEN
-    // const loadingScreen = document.querySelector("#loading-screen");
-    // const loadingLines = document.querySelector(".circle5");
-    // const loadingLines2 = document.querySelector(".circle52");
-    // const loadingText = document.querySelectorAll(".loading-screen__text p");
-
-    // gsap.to(loadingLines, {rotate: "360deg", repeat: -1, duration: 2, ease: "none"});
-    // gsap.to(loadingLines2, {rotate: "-360deg", repeat: -1, duration: 2, ease: "none"});
-
-    // window.addEventListener("load", function(){
-    //   // gsap.to(loadingLines, {rotate: "360deg", repeat: 1, duration: 2, ease: "none"});
-    //   // gsap.to(loadingLines2, {rotate: "-360deg", repeat: 1, duration: 2, ease: "none"});
-    //   // gsap.fromTo(loadingText, {y: "-200%"}, {y: 0, stagger: .5,ease: "Power3.easeOut"}, "<100%");
-    //   gsap.to(loadingScreen, {y: "-100%", delay: .5});
-    //   gsap.fromTo(body, {overflow: "hidden"}, {overflow: "visible"}, "<");
-    // });
-  
     //======================================================== WELCOME PAGE ANIMATIONS
     const welcome = gsap.timeline({
       defaults: { duration: 2.5, ease: "Power3.easeOut"}
@@ -428,8 +245,169 @@ function contentAnimation() {
           },
         },
       });
-    
+
+      console.log('hey');
+  }
+}
+
+window.onresize = reportWindowSize;
+window.onload = reportWindowSize;
+
+//======================================================== HEADER
+const tl = gsap.timeline({
+  defaults: { duration: 1, ease: "Power3.easeOut"}
+})
+
+const body = document.querySelector("body");
+const navBtn = document.querySelector(".nav__menu");
+const bLine1 = document.querySelector("#burger1");
+const bLine2 = document.querySelector("#burger2");
+const bLine3 = document.querySelector("#burger3");
+const navList = document.querySelector(".nav__list");
+
+let showMenu = false;
+
+navBtn.addEventListener("click", ()=>{
+  if(!showMenu) {
+    tl.to(bLine3, {bottom: 0, duration: .5});
+    tl.to(bLine3, {left: 0, width: "100%", duration: .5});
+    tl.to(navList, {top: "70px"});
+    tl.to(bLine1, {rotate: "45deg", marginBottom: "0", duration: .75}, "<");
+    tl.to(bLine2, {rotate: "-45deg", duration: .75}, "<");
+    body.classList.add("active__menu");
+
+    showMenu = true;
+  }
+
+  else{
+    tl.to(navList, {top: "calc(-100vh + 70px)"});
+    tl.to(bLine1, {rotate: "0", marginBottom: "18px", duration: .75}, "<");
+    tl.to(bLine2, {rotate: "0", duration: .75}, "<");
+    tl.to(bLine3, {left: "auto", width: "30px", duration: .5}, "<85%")
+    tl.to(bLine3, {bottom: "auto",marginTop: "18px", duration: .5});
+    body.classList.remove("active__menu");
+
+    showMenu = false;
+  }
+})
+
+//======================================================== PAGE ANIMATIONS
+pageTransition = () => {
+  var timeline = gsap.timeline();
+
+  timeline.to(".page-transition1", {
+    transformOrigin: "bottom",
+    duration: 1,
+    scaleY: 1
+  });
+
+  timeline.to(".page-transition2", {
+    transformOrigin: "bottom",
+    duration: 1,
+    scaleY: 1
+  });
+
+  timeline.to(".page-transition1", {
+    duration: .8,
+    scaleY: 0,
+    transformOrigin: "top",
+    delay: .3
+  }, "<50%");
+
+  timeline.to(".page-transition2", {
+    duration: .8,
+    scaleY: 0,
+    transformOrigin: "top",
+    delay: .3
+  }, "<1%");
+
+
+  // timeline.set(".page-transition", {
+  //   bottom: "-100%"
+  // });
+
+  if(window.innerWidth < 1200){
+    timeline.to(navList, {top: "calc(-100vh + 70px)"}, "<");
+    timeline.to(bLine1, {rotate: "0", marginBottom: "18px", duration: .75}, "<");
+    timeline.to(bLine2, {rotate: "0", duration: .75}, "<");
+    timeline.to(bLine3, {left: "auto", width: "30px", duration: .5}, "<")
+    timeline.to(bLine3, {bottom: "auto",marginTop: "18px", duration: .5}, "<");
+      body.classList.remove("active__menu");
+  
+      showMenu = false;
+  }
+
+}
+
+function delay(n){
+  n = n || 2000;
+  return new Promise(done => {
+    setTimeout(() => {
+      done();
+    }, n);
+  });
+}
+
+barba.init({
+  sync: true,
+
+  transitions: [  
+    {
+      async leave(data) {
+        const done = this.async();
+
+        pageTransition();
+        await delay(1500);
+        done();
+      },
+
+      async enter(data){
+        contentAnimation();
+        let href = data.current.url.href;
+        let currenthref = data.next.url.href;
+
+        const header_contact1 = ["LET'S", "HIRE", "LET'S"];
+        const header_contact2 = ["TALK", "ME", "WORK"];
+
+        var contactHeader = document.querySelector(".contact-main__header");
+
+        if(href == "https://marioskgm.netlify.app/index.html" && currenthref == "https://marioskgm.netlify.app/contact.html" ){
+          contactHeader.children[0].innerHTML = header_contact1[0];
+          contactHeader.children[1].innerHTML = header_contact2[0];
+        }
+
+        else if(href == 'https://marioskgm.netlify.app/services.html' && currenthref == "https://marioskgm.netlify.app/contact.html" ){
+          contactHeader.children[0].innerHTML = header_contact1[1];
+          contactHeader.children[1].innerHTML = header_contact2[1];
+          contactHeader.children[0].style.marginLeft = "20px";
+          contactHeader.children[1].style.marginRight = "50px";
+        }
+
+        else if(href == 'https://marioskgm.netlify.app/work.html' && currenthref == "https://marioskgm.netlify.app/contact.html" ){
+          contactHeader.children[0].innerHTML = header_contact1[2];
+          contactHeader.children[1].innerHTML = header_contact2[2];
+        }        
+      },
+
+      async once(data){
+        contentAnimation();
+      },
     }
+  ],
+})
+
+
+function contentAnimation() {
+  reportWindowSize;
+
+  const navListItems = document.querySelectorAll(".nav__list-item");
+  const navListHome = document.querySelector("#home-link");
+  const navListServices = document.querySelector("#services-link");
+  const navListWork = document.querySelector("#work-link");
+  const navListContact = document.querySelector("#contact-link");
+
+  
+  //================================================================================================================== HOME
 
   if(window.location.pathname == '/index.html') {
 
