@@ -60,6 +60,7 @@
   justify-content: end;
   align-items: center;
   gap: 0.5em;
+  margin-top: 10px;
 }
 .nav__list-item.active a {
   color: #bd9e81;
@@ -364,7 +365,6 @@
   top: 0;
   left: 0;
   z-index: -1;
-  /* rotate: -135deg; */
   border: 2px solid white;
   border-radius: 50%;
   content: url("/dist/img/scroll.svg");
@@ -1284,8 +1284,6 @@
 }
 .work-menu__card-text {
   color: white;
-  width: 60%;
-
 }
 .work-menu__card-image {
   overflow: hidden;
@@ -1295,6 +1293,10 @@
 }
 .work-menu__card:first-child img {
   width: 100%;
+}
+.work-menu__card:nth-child(2) .work-menu__card-image {
+  display: flex;
+  flex-direction: column;
 }
 .work-menu__card:nth-child(2) img {
   width: 100%;
@@ -4192,6 +4194,10 @@ p span {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .work-menu-text {
+    color: white;
+    width: 60%;
+  }
   .work-menu .karma:nth-child(2) {
     width: 80%;
     margin-left: -20%;
@@ -4323,7 +4329,7 @@ p span {
   .work-menu__card-text {
     color: white;
     font-size: 1.1rem;
-    width: 60%;
+    width: 100%;
   }
   .work-menu__card-image {
     display: none;
