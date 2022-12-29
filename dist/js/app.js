@@ -23,6 +23,9 @@ function reportWindowSize() {
   var executed = false;
   if (!executed) {
     executed = true;
+    if(window.location.pathname == '/index.html'){
+      return;
+    } else{
 
     //======================================================== WELCOME PAGE ANIMATIONS
     const welcome = gsap.timeline({
@@ -246,7 +249,7 @@ function reportWindowSize() {
         },
       });
 
-      console.log('hey');
+    }
   }
 }
 
