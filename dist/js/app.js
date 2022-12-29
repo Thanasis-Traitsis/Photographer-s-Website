@@ -33,7 +33,7 @@ function reportWindowSize() {
     const introHeaders = document.querySelectorAll(".welcome__text-box > p");
     const introImage = document.querySelector(".welcome__img > img");
     
-    welcome.fromTo(introImage, {x: "110%"}, {x: "0", duration: 1.5});
+    welcome.fromTo(introImage, {x: "110%"}, {x: "0", duration: 1.5, delay: 1});
     welcome.fromTo(introHeaders, {x: "200%"}, {x: "0", duration: 1.25, stagger: .25} , "<25%");
     // welcome.fromTo(welcomeArrow, {rotate: "-135deg"}, {rotate: "0deg", duration: 1});
     
