@@ -1583,6 +1583,11 @@
   transform: scaleX(1);
 }
 
+.thanks {
+  font-family: "Old Standard TT", sans-serif;
+  color: white;
+}
+
 *,
 *::before,
 *::after {

@@ -1583,6 +1583,16 @@
   transform: scaleX(1);
 }
 
+.thanks {
+  padding: 30px;
+  color: white;
+}
+
+.thanks a{
+  font-family: "Old Standard TT", sans-serif;
+  color: #bd9e81;
+}
+
 *,
 *::before,
 *::after {
