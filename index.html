@@ -41,10 +41,12 @@
         </div>
     </div> -->
 
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="page-transition1"></div>
         <div class="page-transition2"></div>
-    </div>     
+    </div>      -->
+
+    <div id="preloader"></div>
 
     <!-- HEADER -->
     <header class="header">
@@ -479,6 +481,16 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <script src="/dist/js/app.js"></script>
+    <script src="/dist/js/app.js">
+    </script>
+    <script>
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener('load', function(){
+            console.log("hey");
+            // loader.style.display = "none";
+            gsap.to(loader, {y: "-100%"});
+        })
+    </script>
 </body>
 </html>
