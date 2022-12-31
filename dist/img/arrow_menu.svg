@@ -1,5 +1,3 @@
-<svg width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="35" y1="11.3721" y2="11.3721" stroke="white" stroke-width="3"/>
-<line y1="-1.5" x2="12.8399" y2="-1.5" transform="matrix(0.707107 -0.707107 0.717976 0.696068 25.9209 21.9332)" stroke="white" stroke-width="3"/>
-<line y1="-1.5" x2="12.8641" y2="-1.5" transform="matrix(0.707107 0.707107 -0.717976 0.696068 23.7397 2.86909)" stroke="white" stroke-width="3"/>
-</svg>
+version https://git-lfs.github.com/spec/v1
+oid sha256:f97c1ce99336cca80791f5faebda45e1730f7e1bda701f45781037a0392dc899
+size 469
