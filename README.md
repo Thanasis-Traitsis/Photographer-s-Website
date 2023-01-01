@@ -13,4 +13,3 @@ This project is created with:
 
 https://user-images.githubusercontent.com/73651594/187280918-003e0204-97f5-4303-88c6-4413fac80334.mp4
 
-*This website is not yet available on a live server, but it will be completed very soon. STAY TUNED! *
