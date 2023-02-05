@@ -2,5 +2,5 @@
 package = "@netlify/plugin-sitemap"
 
   [plugins.inputs]
-  buildDir = "public"
+  buildDir = "."
   filePath = "./sitemap_index.xml"
